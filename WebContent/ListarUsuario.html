@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<meta charset="UTF-8">
+<title>.::Listar usuarios::.</title>
+</head>
+<body>
+	<form>
+		<div class="ui-field-contain">
+			<label for="txtNome">Nome:</label> <input name="txtNome" id="txtNome"
+				data-clear-btn="true" value="" type="text" />
+		</div>
+
+		<div class="ui-field-contain">
+			<label for="txtSenha">Senha:</label> <input name="txtSenha"
+				id="txtSenha" data-clear-btn="true" value="" type="text" />
+		</div>
+
+		<div class="ui-field-contain">
+			<label for="txtListar">Buscar</label> <input name="txtListar"
+				id="txtListar" data-clear-btn="true" value="" type="text" />
+		</div>
+		<a href="" id="btnBuscar" class="ui-btn ui-corner-all">Buscar</a>
+
+	</form>
+
+	<table data-role="table" id="table-1" class="ui-responsive">
+		<thead>
+			<tr>
+				<th data-priority="1">Usuario</th>
+				<th data-priority="2">Senha</th>
+			</tr>
+		</thead>
+		<tbody id="corpo">
+			<tr>
+				<td>a</td>
+				<td>b</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<script>
+		var listar = function() {
+			$.ajax({
+				type:"POST",
+				url:"ConsultaUsuarios",
+				success: function (a) {
+					$('#corpo').html(a);
+				},
+				error: function(a,b,c){
+					console.log(a,b,c);
+				}
+			});
+		}
+		
+		var listarFiltro = function() {
+			$.ajax({
+				type:"POST",
+				data: { nomUsr: $('#txtListar').val() },
+				url:"ConsultaUsuarios",
+				success: function (a) {
+					if(a &&  a.trim() != ''){
+						$('#txtNome').val(a.split('@')[0]);
+						$('#txtSenha').val(a.split('@')[1]);
+					}
+				},
+				error: function(a,b,c){
+					console.log(a,b,c);
+				}
+			})
+		}
+	
+		$('#btnBuscar').click(function () {
+			listarFiltro();
+		});
+		listar();
+	</script>
+</body>
+</html>
