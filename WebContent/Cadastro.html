@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
   		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 		<meta charset="UTF-8">
@@ -14,54 +14,7 @@
 				padding: 0 35px;
 			}
 		</style>
-		
-	</head>
-	
-	<body>
-	
-		<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
-			<table>
-			<h1>Cadastrar material</h1>
-				<tr>
-						<td>Fornecedor:</td>
-						<td><input name="txtFonecedor" id="txtFonecedor" value="" type="text" placeholder="Fonecedor" /></td>
-						<td>unidade:</td>
-						<td><select name="txtUnidade" id = "txtUnidade" required="required">
-						  <option value="valor1">UN</option> 
-						  <option value="valor2" selected>PC</option>
-						  <option value="valor3">MT</option>
-						</select></td>
-					</tr><tr>
-						<td>Prateleira:</td>
-						<td><input name="txtCorredor" id="txtCorredor" value="" type="text" placeholder="Corredor" required="required"  /></td>
-						<td>Estoque:</td>
-						<td><input name="txtEstoque" id="txtEstoque" value="" type="text" placeholder="Estoque" required="required" /></td>
-					</tr><tr>
-						<td>Produto:</td>
-						<td><input name="txtProduto" id="txtProduto" value="" type="text" placeholder="produto" required="required" /></td>
-						<td>Quantidade:</td>
-						<td><input name="txtQuanditade" id="txtQuanditade" value="" type="number" placeholder="Quantidade" required="required" /></td>
-					</tr><tr>
-						<td>Preço R$:</td>
-						<td><input name="txtPreco" id="txtPreco" value="" type="number" placeholder="Preço R$" min="0.00" step="0.01"  required="required"></td>
-						<td>Status:</td>
-						<td><select name="txtStatus" id= txtStatus >
-						  <option value="valor1">Pago</option> 
-						  <option value="valor2" selected>Não pago</option>
-						</select></td>
-					</tr><tr>
-						<td><input type="submit" value="Salvar" ></td>
-				</tr>
-			</table>
-			
-		</form>
-
-		<h1>'_____________________________________________________________________________________________________________________________________'</h1>
-		
-
-		
-		<table id = "txtTable" width="50%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows >
-			<style>
+					<style>
 				table{
 				 margin: 10px 50px auto 50px;
 				 width: 25%;
@@ -76,14 +29,58 @@
 				td {
 				 font-family: Verdana, Arial, Helvetica, sans-serif;
 				 
-				 text-align: center;
+				 
 				 table-layout: fixed;
 				 height: 10px;
 				}
-				td:hover {
-				 height: 40px;
-				}
 			</style>
+		
+	</head>
+	
+	<body>
+	
+		<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
+			<table>
+			<h1>Cadastrar material</h1>
+				<tr>
+						<td>Fornecedor:</td>
+						<td><input name="txtFonecedor" id="txtFonecedor" value="" type="text" placeholder="Fonecedor" /></td>
+						<td>Prateleira:</td>
+						<td><input name="txtCorredor" id="txtCorredor" value="" type="text" placeholder="Corredor" required="required"/></td>
+					</tr><tr>
+						<td>Estoque:</td>
+						<td><input name="txtEstoque" id="txtEstoque" value="" type="text" placeholder="Estoque" required="required" /></td>
+						<td>Produto:</td>
+						<td><input name="txtProduto" id="txtProduto" value="" type="text" placeholder="produto" required="required" /></td>
+					</tr><tr>
+						<td>Quantidade:</td>
+						<td><input name="txtQuanditade" id="txtQuanditade" value="" type="number" placeholder="Quantidade" required="required" /></td>
+						<td>Preço R$:</td>
+						<td><input name="txtPreco" id="txtPreco" value="" type="number" placeholder="Preço R$" min="0.00" step="0.01"  required="required"></td>
+					</tr><tr>
+						<td>Status:</td>
+						<td><select name="txtStatus" id= txtStatus >
+						  <option value="valor1">Pago</option> 
+						  <option value="valor2" selected>Não pago</option>
+						</select></td>
+						<td>unidade:</td>
+						<td><select name="txtUnidade" id = "txtUnidade" required="required">
+						  <option value="valor1">UN</option> 
+						  <option value="valor2" selected>PC</option>
+						  <option value="valor3">MT</option>
+						</select></td>
+					</tr><tr>
+						<td><input type="submit" value="Salvar" ></td>
+				</tr>
+			</table>
+			
+		</form>
+
+		<h1>'_____________________________________________________________________________________________________________________________________'</h1>
+		
+
+		
+		<table id = "txtTable" width="50%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows >
 
 				 <CAPTION> <h1>Nome do Projeto</h1> </CAPTION>
 
