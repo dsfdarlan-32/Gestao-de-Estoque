@@ -9,15 +9,58 @@
   		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 		<meta charset="UTF-8">
 		<title>Cadastro </title>
+				
 		<style>
 			.formizinho {
-				padding: 0 35px;
+				padding:  35px;
 			}
 		</style>
-					<style>
-				table{
-				 margin: 10px 50px auto 50px;
-				 width: 25%;
+		<style>
+				.teste {
+		    width: 25px;
+		    height: 25px;
+
+			}		
+		</style>
+		<style>
+				input[type=submit] {
+			    padding:5px 15px; 
+			    background:#088A08; 
+			    border:0 none;
+			    cursor:pointer;
+			    -webkit-border-radius: 5px;
+			    border-radius: 5px;
+			    }
+			    select{
+			    padding:5px; 
+			    border:2px solid #ccc; 
+			    -webkit-border-radius: 5px;
+			    border-radius: 5px;
+				}
+				
+			    
+			    input[type=text] {
+			    padding:5px; 
+			    border:2px solid #ccc; 
+			    -webkit-border-radius: 5px;
+			    border-radius: 5px;
+				}
+			
+				input[type=text]:focus {
+				    border-color:#333;
+				}
+				input[type="number"] {
+			    padding:5px; 
+			    border:2px solid #ccc; 
+			    -webkit-border-radius: 5px;
+			    border-radius: 5px;
+				}
+
+		</style>
+		<style>
+			table{
+			 margin: 10px 50px auto 50px;
+		     width: 25%;
 				}
 				th{
 				 color: #ffffff;	
@@ -28,17 +71,15 @@
 				
 				td {
 				 font-family: Verdana, Arial, Helvetica, sans-serif;
-				 
-				 
+
 				 table-layout: fixed;
 				 height: 10px;
 				}
-			</style>
-		
+		</style>
+
 	</head>
 	
 	<body>
-	
 		<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
 			<table>
 			<h1>Cadastrar material</h1>
@@ -72,13 +113,10 @@
 					</tr><tr>
 						<td><input type="submit" value="Salvar" ></td>
 				</tr>
-			</table>
-			
+			</table>	
 		</form>
 
-		<h1>'_____________________________________________________________________________________________________________________________________'</h1>
-		
-
+		<div class = "teste"><h6></h6></div>
 		
 		<table id = "txtTable" width="50%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows >
 
@@ -155,17 +193,13 @@
 						<td><input name="txtAndar" id="txtAndar" value="" type="password" placeholder="Andar" required="required" /></td>
 					</tr><tr>
 						<td>Box:</td>
-						<td><input name="txtBox" id="txtBox" value="" type="password" placeholder="Box" required="required" /></td>
+						<td><input name="txtBox" id="txtBox" value="" type="text" placeholder="Box" required="required" /></td>
 					</tr><tr>
 						<td><input type="submit" value="Salvar"></td>
 				</tr>
 			</table>
 		</form>
-		
-		<h2></h2><h2></h2><h2></h2>
-		<div class="ui-input-btn ui-btn ui-corner-all">
-		<h2></h2><h1></h2><h2></h2>	
-		</div>	
+	<div class = "teste"><h6></h6></div>
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
@@ -182,6 +216,8 @@
 				});
 		  });
 		</script>
+		
+		<div class = "teste"><h6></h6></div>
 	
 	</body>
 </html>

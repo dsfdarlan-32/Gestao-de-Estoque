@@ -4,15 +4,76 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
   		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 		<meta charset="UTF-8">
 		<title>Projeto </title>
+		
 		<style>
 			.formizinho {
 				padding: 0 35px;
 			}
+		</style>
+		<style>
+				.teste {
+		    width: 25px;
+		    height: 25px;
+
+			}		
+		</style>
+		<style>
+				input[type=submit] {
+			    padding:5px 15px; 
+			    background:#088A08; 
+			    border:0 none;
+			    cursor:pointer;
+			    -webkit-border-radius: 5px;
+			    border-radius: 5px;
+			    }
+			    select{
+			    padding:5px; 
+			    border:2px solid #ccc; 
+			    -webkit-border-radius: 5px;
+			    border-radius: 5px;
+				}
+			    
+			    input[type=text] {
+			    padding:5px; 
+			    border:2px solid #ccc; 
+			    -webkit-border-radius: 5px;
+			    border-radius: 5px;
+				}
+			
+				input[type=text]:focus {
+				    border-color:#333;
+				}
+				input[type="number"] {
+			    padding:5px; 
+			    border:2px solid #ccc; 
+			    -webkit-border-radius: 5px;
+			    border-radius: 5px;
+				}
+				
+		</style>
+		<style>
+			table{
+			 margin: 10px 50px auto 50px;
+		     width: 25%;
+				}
+				th{
+				 color: #ffffff;	
+				 font-family: Verdana, Arial, Helvetica;
+				 font-size: 14px;
+				 background-color: #007cc2;
+				}
+				
+				td {
+				 font-family: Verdana, Arial, Helvetica, sans-serif;
+
+				 table-layout: fixed;
+				 height: 10px;
+				}
 		</style>
 		
 	</head>
@@ -33,36 +94,11 @@
 			</table>
 		</form>
 		
-		<div max-width: 100% overflow: scroll>
-		<table id = "txtTable1" width="90%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows style="width:450px" >
-			<style>
-				table{
-				 margin: 10px 50px auto 50px;
-				 width: 25%;
-				}
-				th{
-				 color: #ffffff;	
-				 font-family: Verdana, Arial, Helvetica;
-				 font-size: 14px;
-				 background-color: #007cc2;
-				}
-				
-				td {
-				 font-family: Verdana, Arial, Helvetica, sans-serif;
+		<div class = "teste"><h6></h6></div>
 
-				 text-align: center;
-				 table-layout: fixed;
-				 height: 10px;
-				}
-				td:hover {
-				 height: 40px;
-				}
-			</style>
-
+		<table id = "txtTable" width="50%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows style="width:450px" >
 				 <CAPTION> <h1>Projetos</h1> </CAPTION>
-
 			<thead>
-					
 				<tr>
 					<th>Nome Projeto</th>
 					<th>Material</th>
@@ -183,33 +219,9 @@
 			</table>
 		</form>
 		
-		<h1>'_____________________________________________________________________________________________________________________________________'</h1>
+		<div class = "teste"><h6></h6></div>
 		
-		<table id = "txtTable" width="50%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows >
-			<style>
-				table{
-				 margin: 10px 50px auto 50px;
-				 width: 25%;
-				}
-				th{
-				 color: #ffffff;	
-				 font-family: Verdana, Arial, Helvetica;
-				 font-size: 14px;
-				 background-color: #007cc2;
-				}
-				
-				td {
-				 font-family: Verdana, Arial, Helvetica, sans-serif;
-				 
-				 text-align: center;
-				 table-layout: fixed;
-				 height: 10px;
-				}
-				td:hover {
-				 height: 40px;
-				}
-			</style>
-
+		<table id = "txtTable1" width="50%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows >
 				 <CAPTION> <h1>Nome do Projeto</h1> </CAPTION>
 
 			<thead>
@@ -323,15 +335,28 @@
 				</tr>
 			</tbody>
 		</table>
-				<h2></h2><h2></h2><h2></h2>
-		<div class="ui-input-btn ui-btn ui-corner-all">
-		<h2></h2><h2></h2><h2></h2>
+		
+	<div class = "teste"><h6></h6></div>
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 		<script>
 		  $(document).ready(function(){
 			  $('#txtTable').DataTable({
+				"language": {
+						"lengthMenu": "Mostrando _MENU_ registros por página",
+						"zeroRecords": "Nada encontrado",
+						"info": "Mostrando página _PAGE_ de _PAGES_",
+						"infoEmpty": "Nenhum registro disponível",
+						"infoFiltered": "(filtrado de _MAX_ registros no total)"
+					}
+				});
+		  });
+		</script>
+		
+		<script>
+		  $(document).ready(function(){
+			  $('#txtTable1').DataTable({
 				"language": {
 						"lengthMenu": "Mostrando _MENU_ registros por página",
 						"zeroRecords": "Nada encontrado",
