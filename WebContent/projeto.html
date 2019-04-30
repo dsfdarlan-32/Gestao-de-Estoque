@@ -8,18 +8,19 @@
 		<title>Projeto </title>
 		
 		<style>
-			.formizinho {
+			.etyle1 {
 				padding: 0 35px;
 			}
 		</style>
 		<style>
-				.teste {
+			.etyle2 {
 		    width: 25px;
 		    height: 25px;
 
 			}		
 		</style>
 		<style>
+			.etyle3 	
 				input[type=submit] {
 				font-size: 24px;
 			    padding:5px 15px; 
@@ -35,7 +36,6 @@
 			    -webkit-border-radius: 5px;
 			    border-radius: 5px;
 				}
-			    
 			    input[type=text] {
 			    padding:5px; 
 			    border:2px solid #ccc; 
@@ -52,19 +52,24 @@
 			    -webkit-border-radius: 5px;
 			    border-radius: 5px;
 				}
-				
+				input[type="date"] {
+			    padding:5px; 
+			    border:2px solid #ccc; 
+			    -webkit-border-radius: 5px;
+			    border-radius: 5px;
+				}				
 				input[type=button] {
-				font-size: 20px;
-			    padding:20px 40px; 
+				font-size: 15px;
+			    padding:15px 30px; 
 			    background:#2EFE2E; 
 			    border:0 none;			    
 			    cursor:pointer;
-			    -webkit-border-radius: 20px;
-			    border-radius: 20px;
-			    }    
+			    -webkit-border-radius: 15px;
+			    border-radius: 15px;
+			    }   
 		</style>
 		<style>
-			table{
+			.etyle4{
 			 margin: 10px 50px auto 50px;
 		     width: 25%;
 				}
@@ -82,236 +87,253 @@
 				 height: 10px;
 				}
 		</style>
-		
-	</head>
-	<table>
-		<tr><td>
-			<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
-				<table>
-				<h1>Cadastrar Projeto</h1>
-					<tr>
-						<td>Projeto:</td>
-						<td><input name="txtProjeto" id="txtProjeto" value="" type="text" placeholder="Projeto" required="required" /></td>
-					</tr>
-					<tr>
-						<td>Valor Estimado:</td>
-						<td><input name="txtValor" id="txtValor" value="" type="number" placeholder="Preço R$" min="0.00" step="0.01"  required="required"></td>
-					</tr>
-					<tr>
-						<td><input type="submit" value="Salvar"></td>
-					</tr>
-				</table>
-			</form>
+		<style>
+			.style5{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 14px;
+				color: #f7f5ef;
+				padding: 4px 15px;
 			
-		</td>
-		<td>
-			<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
-				<table>
-				<h1>Cadastrar materiais utilizados</h1>
-					<tr>
-						<td>Projeto:</td>
-						<td><input name="txtProjeto1" id="txtProjeto1" value="" type="text" placeholder="Projeto" required="required" /></td>
-						<td>Material:</td>
-						<td><input name="txtMaterial" id="txtMaterial" value="" type="text" placeholder="Material" required="required" /></td>
-					</tr>
-					<tr>
-						<td>Quantidade:</td>
-						<td><input name="txtQuantidade" id="txtDescricao" value="" type="number" placeholder="Quantidade" required="required" /></td>
-						<td>Etapa da obra:</td>
-						<td><input name="txtEtapa" id=""txtEtapa"" value="" type="text" placeholder="Etapa da obra:" required="required" /></td>
-					</tr>
-					<tr>
-						<td><input type="submit" value="Salvar"></td>
-					</tr>
-				</table>
-			</form>
-		</tr>
-	</table>
-		
-<div class = "teste"><h6></h6></div>
-
-	<table id = "txtTable" width="40%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows style="width:450px" >
-				 <CAPTION> <h1>Projetos</h1> </CAPTION>
-		<thead>
-			<tr>
-				<th>Codigo</th>
-				<th>Nome Projeto</th>
-				<th>Valor Projeto</th>
-				<th>Status</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>	
-				<td>1</td>
-				<td>Tiger Nixon</td>
-				<td>System Architect</td>
-				<td>Parado</td>	
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>Garrett Winters</td>
-				<td>Accountant</td>
-				<td>Em Execulçao</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>Garrett Winters</td>
-				<td>Accountant</td>
-				<td>Não Inicializado</td>
-				</tr>
-			<tr>	
-				<td>4</td>
-				<td>Tiger Nixon</td>
-				<td>System Architect</td>
-				<td>Parado</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td>Garrett Winters</td>
-				<td>Accountant</td>
-				<td>Em Execulçao</td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td>Garrett Winters</td>
-				<td>Accountant</td>
-				<td>Não Inicializado</td>
-			</tr>
-		</tbody>
-	</table>
-		
-<div class = "teste"><h6></h6></div>
-
-		
-<table>
-	<tr>
-		<td>
-			<form action="">
-				<table>
-					<h1> Buscar projeto</h1>
-					<tr>
-						<td>Nome do Projeto:</td>
-						<td><input name="txtProjeto1" id="txtProjeto1" value="" type="text" placeholder="Projeto" required="required" /></td>
-					</tr>
-					<tr>
-						<td><input type="submit" value="Buscar"></td>
-					</tr>
-				</table>
-			</form>	
-		</td><td>
+				background: -webkit-gradient(
+					linear, left top, left bottom,
+					from(#04B404),
+					color-stop(0.50, #31B404),
+					to(#04B404));
+				-moz-border-radius: 14px;
+				-webkit-border-radius: 14px;
+				border-radius: 14px;
+				border: 1px solid #04B404;
+				text-shadow:
+					0px -1px 0px rgba(000,000,000,0.2),
+					0px 1px 0px rgba(255,255,255,0.4);
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr><td>
+				<form action="CadastrarUsuariosAction" method="POST" class="etyle1">
+					<table class="etyle3">
+					<h1>Cadastrar Projet</h1>
+						<tr>
+							<td>Projeto:</td>
+							<td><input name="txtProjeto" id="txtProjeto" value="" type="text" placeholder="Projeto" required="required" /></td>
+						</tr>
+						<tr>
+							<td>Valor Estimado:</td>
+							<td><input name="txtValor" id="txtValor" value="" type="number" placeholder="Preço R$" min="0.00" step="0.01"  required="required"></td>
+						</tr>
+						<tr>
+							<td><input type="submit" value="Salvar"></td>
+						</tr>
+					</table>
+				</form>
+			</td>
+			<td>
 				<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
-				<table>
-				<h1>Editar materias</h1>
-					<tr>
-						<td>Projeto:</td>
-						<td><input name="txtProjeto1" id="txtProjeto1" value="" type="text" placeholder="Projeto" required="required" /></td>
-						<td>Material:</td>
-						<td><input name="txtMaterial" id="txtMaterial" value="" type="text" placeholder="Material/Codigo" required="required" /></td>
-					</tr>
-					<tr>
-						<td>Quantidade:</td>
-						<td><input name="txtQuantidade" id="txtDescricao" value="" type="number" placeholder="Quantidade" required="required" /></td>
-						<td>Etapa da obra:</td>
-						<td><input name="txtEtapa" id=""txtEtapa"" value="" type="text" placeholder="Etapa da obra:" required="required" /></td>
-					</tr>
-					<tr>
-						<td><input type="submit" value="Salvar"></td>
-					</tr>
-				</table>
-			</form>
-		</td>
-	</tr>
-</table>
-
-<div class = "teste"><h6></h6></div>
-
-	<form action="">
-		<table id = "txtTable1" width="40%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows >
-			 <CAPTION> <h1>Nome do Projeto</h1> </CAPTION>
+					<table class="etyle3">
+					<h1>Cadastrar materiais utilizados</h1>
+						<tr>
+							<td>Projeto:</td>
+							<td><input name="txtProjeto1" id="txtProjeto1" value="" type="text" placeholder="Projeto" required="required" /></td>
+							<td>Material:</td>
+							<td><input name="txtMaterial" id="txtMaterial" value="" type="text" placeholder="Material" required="required" /></td>
+						</tr>
+						<tr>
+							<td>Quantidade:</td>
+							<td><input name="txtQuantidade" id="txtDescricao" value="" type="number" placeholder="Quantidade" required="required" /></td>
+							<td>Etapa da obra:</td>
+							<td><input name="txtEtapa" id="txtEtapa" value="" type="text" placeholder="Etapa da obra:" required="required" /></td>
+						</tr>
+						<tr>
+							<td><input type="submit" value="Salvar"></td>
+						</tr>
+					</table>
+				</form>
+			</tr>
+		</table>
+			
+		<div class = "etyle1"><h6></h6></div>
+		
+		<table id="txtTable" width="40%" cellspacing="0" border="2" CELLSPACING=2 CELLPADDING=5 RULES=rows >
+			<CAPTION> <h1>Projetos</h1> </CAPTION>
 			<thead>
 				<tr>
-					<th>Codigo Material</th>
-					<th>material</th>
-					<th>Etapa da obra:</th>
-					<th>Quantidade</th>
+					<th>Codigo</th>
+					<th>Nome Projeto</th>
+					<th>Valor Projeto</th>
+					<th>Status</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
+				<tr>	
 					<td>1</td>
 					<td>Tiger Nixon</td>
 					<td>System Architect</td>
-					<td>10</td>
+					<td>Parado</td>
+					<td><input type="submit" value="Editar" class="style5"></td>
 				</tr>
 				<tr>
 					<td>2</td>
 					<td>Garrett Winters</td>
 					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				 <tr>
-				 	<td>3</td>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
+					<td>Em Execulçao</td>
+					<td><input type="submit" value="Editar" class="style5"></td>
 				</tr>
 				<tr>
-					<td>4</td>
+					<td>3</td>
 					<td>Garrett Winters</td>
 					<td>Accountant</td>
-					<td>10</td>
+					<td>Não Inicializado</td>
+					<td><input type="submit" value="Editar" class="style5"></td>
+					</tr>
+				<tr>	
+					<td>4</td>
+					<td>Tiger Nixon</td>
+					<td>System Architect</td>
+					<td>Parado</td>
+					<td><input type="submit" value="Editar" class="style5"></td>
 				</tr>
 				<tr>
 					<td>5</td>
-					<td>Tiger Nixon</td>
-					<td>System Architect</td>
-					<td>10</td>
+					<td>Garrett Winters</td>
+					<td>Accountant</td>
+					<td>Em Execulçao</td>
+					<td><input type="submit" value="Editar" class="style5"></td>
 				</tr>
 				<tr>
 					<td>6</td>
 					<td>Garrett Winters</td>
 					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				<tr>
-					<td>7</td>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				 <tr>
-				 	<td>8</td>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
+					<td>Não Inicializado</td>
+					<td><input type="submit" value="Editar" class="style5"></td>
+					
 				</tr>
 			</tbody>
 		</table>
-	</form>
-
-<div>
-	<form action="">
+			
+		<div class = "etyle1"><h6></h6></div>
+	
 		<table>
 			<tr>
 				<td>
-					<h1>Gerar Relatorio de Gastos</h1>
-				</td>
-				<td>
-					<input type="button" value="Gerar">
+					<form action="" class="etyle1">
+						<table class="etyle3">
+							<h1>Buscar projeto</h1>
+							<tr>
+								<td>Nome do Projeto:</td>
+								<td><input name="txtProjeto1" id="txtProjeto1" value="" type="text" placeholder="Projeto" required="required" /></td>
+							</tr>
+							<tr>
+								<td><input type="submit" value="Buscar"></td>
+							</tr>
+						</table>
+					</form>	
+				</td><td>
+						<form action="CadastrarUsuariosAction" method="POST" class="etyle1">
+						<table class="etyle3">
+						<h1>Editar materias</h1>
+							<tr>
+								<td>Projeto:</td>
+								<td><input name="txtProjeto1" id="txtProjeto1" value="" type="text" placeholder="Projeto" required="required" /></td>
+								<td>Material:</td>
+								<td><input name="txtMaterial" id="txtMaterial" value="" type="text" placeholder="Material/Codigo" required="required" /></td>
+							</tr>
+							<tr>
+								<td>Quantidade:</td>
+								<td><input name="txtQuantidade" id="txtDescricao" value="" type="number" placeholder="Quantidade" required="required" /></td>
+								<td>Etapa da obra:</td>
+								<td><input name="txtEtapa" id=""txtEtapa"" value="" type="text" placeholder="Etapa da obra:" required="required" /></td>
+							</tr>
+							<tr>
+								<td><input type="submit" value="Salvar"></td>
+							</tr>
+						</table>
+					</form>
 				</td>
 			</tr>
 		</table>
-	</form>	
-</div>
-
-<div class = "teste"><h6></h6></div>
-		
+	
+		<div class = "etyle2"><h6></h6></div>
+	
+		<form action="">
+			<table id = "txtTable1" width="50%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows >
+				 <CAPTION><h1>Nome do Projeto</h1></CAPTION>
+				<thead>
+					<tr>
+						<th>Codigo Material</th>
+						<th>material</th>
+						<th>Etapa da obra:</th>
+						<th>Quantidade</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Tiger Nixon</td>
+						<td>System Architect</td>
+						<td>10</td>
+						<td><input type="submit" value="Editar" class="style5"></td>
+						
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Garrett Winters</td>
+						<td>Accountant</td>
+						<td>10</td>
+						<td><input type="submit" value="Editar" class="style5"></td>
+					</tr>
+					 <tr>
+					 	<td>3</td>
+						<td>Garrett Winters</td>
+						<td>Accountant</td>
+						<td>10</td>
+						<td><input type="submit" value="Editar" class="style5"></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Garrett Winters</td>
+						<td>Accountant</td>
+						<td>10</td>
+						<td><input type="submit" value="Editar" class="style5"></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Tiger Nixon</td>
+						<td>System Architect</td>
+						<td>10</td>
+						<td><input type="submit" value="Editar" class="style5"></td>
+					</tr>
+			
+				</tbody>
+			</table>
+		</form>
+	
+		<div>
+			<form action="">
+				<table>
+					<tr>
+						<td>
+							<h1>Gerar Relatorio de Gastos</h1>
+						</td>
+						<td>
+							<input type="button" value="Gerar">
+						</td>
+					</tr>
+				</table>
+			</form>	
+		</div>
+	
+		<div class = "etyle2"><h6></h6></div>
+			
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 		<script>
-		  $(document).ready(function(){
-			  $('#txtTable').DataTable({
-				"language": {
+			 $(document).ready(function(){
+				 $('#txtTable').DataTable({
+					"language": {
 						"lengthMenu": "Mostrando _MENU_ registros por página",
 						"zeroRecords": "Nada encontrado",
 						"info": "Mostrando página _PAGE_ de _PAGES_",
@@ -319,13 +341,12 @@
 						"infoFiltered": "(filtrado de _MAX_ registros no total)"
 					}
 				});
-		  });
-		</script>
-		
+			 });
+		</script>	
 		<script>
-		  $(document).ready(function(){
-			  $('#txtTable1').DataTable({
-				"language": {
+			 $(document).ready(function(){
+				 $('#txtTable1').DataTable({
+					"language": {
 						"lengthMenu": "Mostrando _MENU_ registros por página",
 						"zeroRecords": "Nada encontrado",
 						"info": "Mostrando página _PAGE_ de _PAGES_",
@@ -333,8 +354,7 @@
 						"infoFiltered": "(filtrado de _MAX_ registros no total)"
 					}
 				});
-		  });
+			  });
 		</script>
-
 	</body>
 </html>

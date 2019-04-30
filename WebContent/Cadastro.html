@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
 <!-- 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
@@ -11,17 +11,19 @@
 		<title>Cadastro </title>
 				
 		<style>
-			.formizinho {
-				padding:  35px;
+			.etyle1 {
+				padding: 0 35px;
 			}
 		</style>
-		<style> 
- 			.teste { 
-  		 width: 25px; 
-	    height: 25px;
-			}		
- 		</style>
 		<style>
+			.etyle2 {
+		    width: 25px;
+		    height: 25px;
+
+			}		
+		</style>
+		<style>
+			.etyle3 	
 				input[type=submit] {
 				font-size: 24px;
 			    padding:5px 15px; 
@@ -37,14 +39,12 @@
 			    -webkit-border-radius: 5px;
 			    border-radius: 5px;
 				}
-			    
 			    input[type=text] {
 			    padding:5px; 
 			    border:2px solid #ccc; 
 			    -webkit-border-radius: 5px;
 			    border-radius: 5px;
 				}
-			
 				input[type=text]:focus {
 				    border-color:#333;
 				}
@@ -60,19 +60,18 @@
 			    -webkit-border-radius: 5px;
 			    border-radius: 5px;
 				}
-				
 				input[type=button] {
-				font-size: 24px;
-			    padding:20px 40px; 
+				font-size: 15px;
+			    padding:15px 30px; 
 			    background:#2EFE2E; 
 			    border:0 none;			    
 			    cursor:pointer;
-			    -webkit-border-radius: 20px;
-			    border-radius: 20px;
-			    }    
+			    -webkit-border-radius: 15px;
+			    border-radius: 15px;
+			    }   
 		</style>
 		<style>
-			table{
+			.etyle4{
 			 margin: 10px 50px auto 50px;
 		     width: 25%;
 				}
@@ -85,148 +84,161 @@
 				
 				td {
 				 font-family: Verdana, Arial, Helvetica, sans-serif;
+
 				 table-layout: fixed;
 				 height: 10px;
 				}
 		</style>
+		<style>
+			.style5{
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 14px;
+				color: #f7f5ef;
+				padding: 4px 15px;
+			
+				background: -webkit-gradient(
+					linear, left top, left bottom,
+					from(#04B404),
+					color-stop(0.50, #31B404),
+					to(#04B404));
+				-moz-border-radius: 14px;
+				-webkit-border-radius: 14px;
+				border-radius: 14px;
+				border: 1px solid #04B404;
+				text-shadow:
+					0px -1px 0px rgba(000,000,000,0.2),
+					0px 1px 0px rgba(255,255,255,0.4);
+			}
+		</style>
 	</head>
-	<body>
-		
-<table>
-	<tr>
-		<td>
-			<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
-				<table>
-				<h1>Cadastrar material</h1>
-					<tr>
-						<td>Fornecedor:</td>
-						<td><input name="txtFonecedor" id="txtFonecedor" value="" type="text" placeholder="Fonecedor" /></td>
-						<td>Prateleira:</td>
-						<td><input name="txtCorredor" id="txtCorredor" value="" type="text" placeholder="Corredor" required="required"/></td>
-					</tr><tr>
-						<td>Estoque:</td>
-						<td><input name="txtEstoque" id="txtEstoque" value="" type="text" placeholder="Estoque" required="required" /></td>
-						<td>Produto:</td>
-						<td><input name="txtProduto" id="txtProduto" value="" type="text" placeholder="produto" required="required" /></td>
-					</tr><tr>
-						<td>Quantidade:</td>
-						<td><input name="txtQuanditade" id="txtQuanditade" value="" type="number" placeholder="Quantidade" required="required" /></td>
-						<td>Preço R$:</td>
-						<td><input name="txtPreco" id="txtPreco" value="" type="number" placeholder="Preço R$" min="0.00" step="0.01"  required="required"></td>
-					</tr><tr>
-						<td>Status:</td>
-						<td><select name="txtStatus" id= txtStatus >
-							 	<option value="valor1">Pago</option> 
-							 	<option value="valor2" selected>Não pago</option>
-							</select></td>
-						<td>unidade:</td>
-						<td><select name="txtUnidade" id = "txtUnidade" required="required">
-							  <option value="valor1">UN</option> 
-							  <option value="valor2" selected>PC</option>
-							  <option value="valor3">MT</option>
-							</select></td>
-					</tr><tr>
-					<td>Data Vencimento:</td>
-						<td><input name="txtDataVencimento" id="txtDataVencimento" value="" type="date" required="required" /></td>
-					</tr><tr>
-						<td><input type="submit" value="Salvar" ></td>
-					</tr>
-				</table>	
-			</form>
-		</td><td>	
-			<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
-				<table>
-				<h1>Cadastrar Unidade</h1>
-					<tr>
-						<td>Unidade:</td>
-						<td><input name="txtUnidade" id="txtUnidade" value="" type="text" placeholder="pc" required="required" /></td>
-					</tr><tr>
-						<td>Descrição:</td>
-							<td><input name="txtDescricao" id="txtDescricao" value="" type="text" placeholder="Peça" required="required" /></td>
-						</tr><tr>
-							<td><input type="submit" value="Salvar"></td>
-					</tr>
-				</table>
-		</form>
-	</tr>
-</table>
-		
-<table>
-	<tr>
-		<td>
-			<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
-				<table>
-				<h1>Cadastrar Local de estocagem</h1>
-					<tr>
-						<td>Codigo Local:</td>
-						<td><input name="txtCodLocal" id="txtCodLocal" value="" type="text" placeholder="Codico do Local" required="required" /></td>
-						<td>Corredor:</td>
-						<td><input name="txtCorredor" id="txtCorredor" value="" type="text" placeholder="Corredor" required="required" /></td>
-					</tr><tr>
-						<td>Prateleira:</td>
-						<td><input name="txtCorredor" id="txtCorredor" value="" type="text" placeholder="Corredor" required="required" required="required" /></td>
-						<td>Andar:</td>
-						<td><input name="txtAndar" id="txtAndar" value="" type="password" placeholder="Andar" required="required" /></td>
-					</tr><tr>
-						<td>Box:</td>
-						<td><input name="txtBox" id="txtBox" value="" type="text" placeholder="Box" required="required" /></td>
-					</tr><tr>
-						<td><input type="submit" value="Salvar"></td>
-					</tr>
-				</table>
-			</form>
-		</td><td>
-		<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
-				<table>
-				<h1>Cadastrar Fornecedor</h1>
-					<tr>
-							<td>Fornecedor:</td>
-							<td><input name="txtFornecedor" id="txtFornecedor" value="" type="text" placeholder="Nome Fornecedor" required="required" /></td>
-						</tr><tr>
-							<td>Codigo Fornecedor:</td>
-							<td><input name="txtCodFornecedor" id="txtCodFornecedor" value="" type="text" placeholder="Codigo Fornecedor" required="required" /></td>
-						</tr><tr>
-							<td><input type="submit" value="Salvar"></td>
-					</tr>
+		<table>
+			<tr>
+				<td>
+					<form action="CadastrarUsuariosAction" method="POST" class="etyle1">
+						<table class="etyle3">
+						<h1>Cadastrar Local de estocagem</h1>
+							<tr>
+								<td>Codigo Local:</td>
+								<td><input name="txtCodLocal" id="txtCodLocal" value="" type="text" placeholder="Codico do Local" required="required" /></td>
+								<td>Corredor:</td>
+								<td><input name="txtCorredor" id="txtCorredor" value="" type="text" placeholder="Corredor" required="required" /></td>
+							</tr><tr>
+								<td>Prateleira:</td>
+								<td><input name="txtCorredor" id="txtCorredor" value="" type="text" placeholder="Corredor" required="required" required="required" /></td>
+								<td>Andar:</td>
+								<td><input name="txtAndar" id="txtAndar" value="" type="text" placeholder="Andar" required="required" /></td>
+							</tr><tr>
+								<td>Box:</td>
+								<td><input name="txtBox" id="txtBox" value="" type="text" placeholder="Box" required="required" /></td>
+							</tr><tr>
+								<td><input type="submit" value="Salvar"></td>
+							</tr>
+						</table>
+					</form>
 					
-				</table>
-			</form>
-		</td>
-	</tr>
-</table>
-		
-		
-		
-		
-		
-		
-	<div class = "teste"><h6></h6></div>
-	
-	<table id = "txtTable" width="50%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows >
-
-				 <CAPTION> <h1>Materiais</h1> </CAPTION>
-
-			<thead>
-					
-				<tr>
-					<th>material</th>
-					<th>Etapa da obra:</th>
-					<th>Quantidade</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>	
-					<td>Tiger Nixon</td>
-					<td>System Architect</td>
-					<td>10</td>
-				</tr>
-				<tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-			</tbody>
+				</td><td>	
+					<form action="CadastrarUsuariosAction" method="POST" class="etyle1">
+						<table class="etyle3">
+						<h1>Cadastrar Unidade</h1>
+							<tr>
+								<td>Unidade:</td>
+								<td><input name="txtUnidade" id="txtUnidade" value="" type="text" placeholder="pc" required="required" /></td>
+							</tr><tr>
+								<td>Descrição:</td>
+									<td><input name="txtDescricao" id="txtDescricao" value="" type="text" placeholder="Peça" required="required" /></td>
+								</tr><tr>
+									<td><input type="submit" value="Salvar"></td>
+							</tr>
+						</table>
+				</form>
+			</tr>
 		</table>
+		
+		<table>
+			<tr>
+				<td>
+					<form action="CadastrarUsuariosAction" method="POST" class="etyle1">
+						<table class="etyle3">
+						<h1>Cadastrar material</h1>
+							<tr>
+								<td>Fornecedor:</td>
+								<td><input name="txtFonecedor" id="txtFonecedor" value="" type="text" placeholder="Fonecedor" /></td>
+								<td>Prateleira:</td>
+								<td><input name="txtCorredor" id="txtCorredor" value="" type="text" placeholder="Corredor" required="required"/></td>
+							</tr><tr>
+								<td>Estoque:</td>
+								<td><input name="txtEstoque" id="txtEstoque" value="" type="text" placeholder="Estoque" required="required" /></td>
+								<td>Produto:</td>
+								<td><input name="txtProduto" id="txtProduto" value="" type="text" placeholder="produto" required="required" /></td>
+							</tr><tr>
+								<td>Quantidade:</td>
+								<td><input name="txtQuanditade" id="txtQuanditade" value="" type="number" placeholder="Quantidade" required="required" /></td>
+								<td>Preço R$:</td>
+								<td><input name="txtPreco" id="txtPreco" value="" type="number" placeholder="Preço R$" min="0.00" step="0.01"  required="required"></td>
+							</tr><tr>
+								<td>Status:</td>
+								<td><select name="txtStatus" id= txtStatus >
+									 	<option value="valor1">Pago</option> 
+									 	<option value="valor2" selected>Não pago</option>
+									</select></td>
+								<td>unidade:</td>
+								<td><select name="txtUnidade" id = "txtUnidade" required="required">
+									  <option value="valor1">UN</option> 
+									  <option value="valor2" selected>PC</option>
+									  <option value="valor3">MT</option>
+									</select></td>
+							</tr><tr>
+							<td>Data Vencimento:</td>
+								<td><input name="txtDataVencimento" id="txtDataVencimento" value="" type="date" required="required" /></td>
+							</tr><tr>
+								<td><input type="submit" value="Salvar" ></td>
+							</tr>
+						</table>	
+					</form>
+				</td><td>
+					<form>
+						<table class="etyle3">
+						<h1>Cadastrar Fornecedor</h1>
+							<tr>
+								<td>Fornecedor:</td>
+									<td><input name="txtFornecedor" id="txtFornecedor" value="" type="text" placeholder="Nome Fornecedor" required="required" /></td>
+							</tr><tr>
+								<td>Codigo Fornecedor:</td>
+								<td><input name="txtCodFornecedor" id="txtCodFornecedor" value="" type="text" placeholder="Codigo Fornecedor" required="required" /></td>
+							</tr><tr>
+								<td><input type="submit" value="Salvar"></td>
+							</tr>
+						</table>
+					</form>
+				</td>
+			</tr>
+		</table>
+	
+<table id = "txtTable" width="60%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows >
+	<CAPTION> <h1>Materiais</h1> </CAPTION>
+	<thead>
+		<tr>
+			<th>material</th>
+			<th>Etapa da obra:</th>
+			<th>Quantidade</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>	
+			<td>Tiger Nixon</td>
+			<td>System Architect</td>
+			<td>10</td>
+			<td><input type="submit" value="Editar" class="style5"></td>
+		</tr>
+		<tr>
+			<td>Garrett Winters</td>
+			<td>Accountant</td>
+			<td>10</td>
+			<td><input type="submit" value="Editar" class="style5"></td>
+		</tr>
+	</tbody>
+</table>
 
 <div>
 	<form action="">
@@ -259,7 +271,7 @@
 		  });
 		</script>
 		
-		<div class = "teste"><h6></h6></div>
+		<div class = "etyle2"><h6></h6></div>
 	
 	</body>
 </html>
