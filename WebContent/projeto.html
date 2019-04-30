@@ -2,9 +2,6 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-		<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
-<!-- 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
   		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 		<meta charset="UTF-8">
@@ -24,6 +21,7 @@
 		</style>
 		<style>
 				input[type=submit] {
+				font-size: 24px;
 			    padding:5px 15px; 
 			    background:#2EFE2E; 
 			    border:0 none;
@@ -55,6 +53,15 @@
 			    border-radius: 5px;
 				}
 				
+				input[type=button] {
+				font-size: 20px;
+			    padding:20px 40px; 
+			    background:#2EFE2E; 
+			    border:0 none;			    
+			    cursor:pointer;
+			    -webkit-border-radius: 20px;
+			    border-radius: 20px;
+			    }    
 		</style>
 		<style>
 			table{
@@ -77,213 +84,227 @@
 		</style>
 		
 	</head>
-		<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
-			<table>
-			<h1>Cadastrar Projeto</h1>
-				<tr>
-					<td>Projeto:</td>
-					<td><input name="txtProjeto" id="txtProjeto" value="" type="text" placeholder="Projeto" required="required" /></td>
-				</tr>
-				<tr>
-					<td>Valor Estimado:</td>
-					<td><input name="txtValor" id="txtValor" value="" type="number" placeholder="Preço R$" min="0.00" step="0.01"  required="required"></td>
-				</tr>
-				<tr>
-					<td><input type="submit" value="Salvar"></td>
-				</tr>
-			</table>
-		</form>
+	<table>
+		<tr><td>
+			<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
+				<table>
+				<h1>Cadastrar Projeto</h1>
+					<tr>
+						<td>Projeto:</td>
+						<td><input name="txtProjeto" id="txtProjeto" value="" type="text" placeholder="Projeto" required="required" /></td>
+					</tr>
+					<tr>
+						<td>Valor Estimado:</td>
+						<td><input name="txtValor" id="txtValor" value="" type="number" placeholder="Preço R$" min="0.00" step="0.01"  required="required"></td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="Salvar"></td>
+					</tr>
+				</table>
+			</form>
+			
+		</td>
+		<td>
+			<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
+				<table>
+				<h1>Cadastrar materiais utilizados</h1>
+					<tr>
+						<td>Projeto:</td>
+						<td><input name="txtProjeto1" id="txtProjeto1" value="" type="text" placeholder="Projeto" required="required" /></td>
+						<td>Material:</td>
+						<td><input name="txtMaterial" id="txtMaterial" value="" type="text" placeholder="Material" required="required" /></td>
+					</tr>
+					<tr>
+						<td>Quantidade:</td>
+						<td><input name="txtQuantidade" id="txtDescricao" value="" type="number" placeholder="Quantidade" required="required" /></td>
+						<td>Etapa da obra:</td>
+						<td><input name="txtEtapa" id=""txtEtapa"" value="" type="text" placeholder="Etapa da obra:" required="required" /></td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="Salvar"></td>
+					</tr>
+				</table>
+			</form>
+		</tr>
+	</table>
 		
-		<div class = "teste"><h6></h6></div>
+<div class = "teste"><h6></h6></div>
 
-		<table id = "txtTable" width="40%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows style="width:450px" >
+	<table id = "txtTable" width="40%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows style="width:450px" >
 				 <CAPTION> <h1>Projetos</h1> </CAPTION>
+		<thead>
+			<tr>
+				<th>Codigo</th>
+				<th>Nome Projeto</th>
+				<th>Valor Projeto</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>	
+				<td>1</td>
+				<td>Tiger Nixon</td>
+				<td>System Architect</td>
+				<td>Parado</td>	
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Garrett Winters</td>
+				<td>Accountant</td>
+				<td>Em Execulçao</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Garrett Winters</td>
+				<td>Accountant</td>
+				<td>Não Inicializado</td>
+				</tr>
+			<tr>	
+				<td>4</td>
+				<td>Tiger Nixon</td>
+				<td>System Architect</td>
+				<td>Parado</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Garrett Winters</td>
+				<td>Accountant</td>
+				<td>Em Execulçao</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Garrett Winters</td>
+				<td>Accountant</td>
+				<td>Não Inicializado</td>
+			</tr>
+		</tbody>
+	</table>
+		
+<div class = "teste"><h6></h6></div>
+
+		
+<table>
+	<tr>
+		<td>
+			<form action="">
+				<table>
+					<h1> Buscar projeto</h1>
+					<tr>
+						<td>Nome do Projeto:</td>
+						<td><input name="txtProjeto1" id="txtProjeto1" value="" type="text" placeholder="Projeto" required="required" /></td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="Buscar"></td>
+					</tr>
+				</table>
+			</form>	
+		</td><td>
+				<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
+				<table>
+				<h1>Editar materias</h1>
+					<tr>
+						<td>Projeto:</td>
+						<td><input name="txtProjeto1" id="txtProjeto1" value="" type="text" placeholder="Projeto" required="required" /></td>
+						<td>Material:</td>
+						<td><input name="txtMaterial" id="txtMaterial" value="" type="text" placeholder="Material/Codigo" required="required" /></td>
+					</tr>
+					<tr>
+						<td>Quantidade:</td>
+						<td><input name="txtQuantidade" id="txtDescricao" value="" type="number" placeholder="Quantidade" required="required" /></td>
+						<td>Etapa da obra:</td>
+						<td><input name="txtEtapa" id=""txtEtapa"" value="" type="text" placeholder="Etapa da obra:" required="required" /></td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="Salvar"></td>
+					</tr>
+				</table>
+			</form>
+		</td>
+	</tr>
+</table>
+
+<div class = "teste"><h6></h6></div>
+
+	<form action="">
+		<table id = "txtTable1" width="40%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows >
+			 <CAPTION> <h1>Nome do Projeto</h1> </CAPTION>
 			<thead>
 				<tr>
-					<th>Nome Projeto</th>
-					<th>Valor Projeto</th>
-					<th>Status</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>	
-					<td>Tiger Nixon</td>
-					<td>System Architect</td>
-					<td>Parado</td>
-					
-				</tr>
-				<tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>Em Execulçao</td>
-				</tr>
-				 <tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>Não Inicializado</td>
-				</tr>
-				<tr>	
-					<td>Tiger Nixon</td>
-					<td>System Architect</td>
-					<td>Parado</td>
-				</tr>
-				<tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>Em Execulçao</td>
-				</tr>
-				 <tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>Não Inicializado</td>
-				
-				</tr>
-
-			</tbody>
-		</table>
-	
-		<form action="CadastrarUsuariosAction" method="POST" class="formizinho">
-			<table>
-			<h1>Cadastrar materiais utilizados</h1>
-				<tr>
-					<td>Projeto:</td>
-					<td><input name="txtProjeto1" id="txtProjeto1" value="" type="text" placeholder="Projeto" required="required" /></td>
-					<td>Material:</td>
-					<td><input name="txtMaterial" id="txtMaterial" value="" type="text" placeholder="Material" required="required" /></td>
-				</tr>
-					
-				<tr>
-					<td>Quantidade:</td>
-					<td><input name="txtQuantidade" id="txtDescricao" value="" type="number" placeholder="Quantidade" required="required" /></td>
-					<td>Etapa da obra:</td>
-					<td><input name="txtEtapa" id=""txtEtapa"" value="" type="text" placeholder="Etapa da obra:" required="required" /></td>
-					
-				</tr>
-	
-				<tr>
-					<td><input type="submit" value="Salvar"></td>
-				</tr>
-			</table>
-		</form>
-		
-		<div class = "teste"><h6></h6></div>
-		
-		<table id = "txtTable1" width="50%" cellspacing="0"  border="2"  CELLSPACING=2 CELLPADDING=5 RULES=rows >
-				 <CAPTION> <h1>Nome do Projeto</h1> </CAPTION>
-
-			<thead>
-					
-				<tr>
+					<th>Codigo Material</th>
 					<th>material</th>
 					<th>Etapa da obra:</th>
 					<th>Quantidade</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>	
+				<tr>
+					<td>1</td>
 					<td>Tiger Nixon</td>
 					<td>System Architect</td>
 					<td>10</td>
 				</tr>
 				<tr>
+					<td>2</td>
 					<td>Garrett Winters</td>
 					<td>Accountant</td>
 					<td>10</td>
 				</tr>
 				 <tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				 <tr>
+				 	<td>3</td>
 					<td>Garrett Winters</td>
 					<td>Accountant</td>
 					<td>10</td>
 				</tr>
 				<tr>
+					<td>4</td>
+					<td>Garrett Winters</td>
+					<td>Accountant</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<td>5</td>
 					<td>Tiger Nixon</td>
 					<td>System Architect</td>
 					<td>10</td>
 				</tr>
 				<tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				 <tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				 <tr>
+					<td>6</td>
 					<td>Garrett Winters</td>
 					<td>Accountant</td>
 					<td>10</td>
 				</tr>
 				<tr>
-					<td>Tiger Nixon</td>
-					<td>System Architect</td>
-					<td>10</td>
-				</tr>
-				<tr>
+					<td>7</td>
 					<td>Garrett Winters</td>
 					<td>Accountant</td>
 					<td>10</td>
 				</tr>
 				 <tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				 <tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				<tr>
-					<td>Tiger Nixon</td>
-					<td>System Architect</td>
-					<td>10</td>
-				</tr>
-				<tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				 <tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				 <tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				<tr>
-					<td>Tiger Nixon</td>
-					<td>System Architect</td>
-					<td>10</td>
-				</tr>
-				<tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				 <tr>
-					<td>Garrett Winters</td>
-					<td>Accountant</td>
-					<td>10</td>
-				</tr>
-				 <tr>
+				 	<td>8</td>
 					<td>Garrett Winters</td>
 					<td>Accountant</td>
 					<td>10</td>
 				</tr>
 			</tbody>
 		</table>
-		
-	<div class = "teste"><h6></h6></div>
+	</form>
+
+<div>
+	<form action="">
+		<table>
+			<tr>
+				<td>
+					<h1>Gerar Relatorio de Gastos</h1>
+				</td>
+				<td>
+					<input type="button" value="Gerar">
+				</td>
+			</tr>
+		</table>
+	</form>	
+</div>
+
+<div class = "teste"><h6></h6></div>
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
@@ -314,8 +335,6 @@
 				});
 		  });
 		</script>
-		
-		
 
 	</body>
 </html>
