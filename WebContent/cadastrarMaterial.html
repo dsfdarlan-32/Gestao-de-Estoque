@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<head>
+	<title>Material</title>
+	<link
+		href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+		rel="stylesheet" id="bootstrap-css">
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
+	<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+
+		<style>
+			.etyle4{
+			 margin: 10px 50px auto 50px;
+		     width: 25%;
+				}
+				th{
+				 color: #ffffff;	
+				 font-family: Verdana, Arial, Helvetica;
+				 font-size: 14px;
+				 background-color: #007cc2;
+				}
+				
+				td {
+				 font-family: Verdana, Arial, Helvetica, sans-serif;
+
+				 table-layout: fixed;
+				 height: 10px;
+				}
+		</style>
+
+		<style>
+			.etyle1 {
+				padding: 0 35px;
+			}
+		</style>
+
+</head>
+<body>
+
+	<form class="form-horizontal">
+		<fieldset>
+			<div class="panel panel-primary">
+				<div class="panel-heading">Cadastrar Material</div>
+				<div class="panel-body">
+					<div class="form-group">
+
+						<div id="newpost">
+							<div class="form-group">
+								<div class="col-md-2 control-label">
+									<h3>Material</h3>
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="form-group">
+								<label class="col-md-2 control-label" for="vinculo">Fornecedor:</label>
+								<div class="col-md-2">
+									<input id="fornecedor" name="fornecedor" placeholder="Fornecedor"
+										class="form-control input-md" type="text">
+								</div>
+								<label class="col-md-1 control-label" for="Nome">Prateleira:</label>
+								<div class="col-md-2">
+									<input id="prateleira" name="prateleira" placeholder="Prateleira"
+										class="form-control input-md" type="text">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-2 control-label" for="Estado Civil">Estoque:</label>
+								<div class="col-md-2">
+									<input id="estoque" name="estoque"
+										placeholder="Estoque" class="form-control input-md"
+										type="text">
+								</div>
+								<label class="col-md-1 control-label" for="Estado Civil">Produto:</label>
+								<div class="col-md-2">
+									<input id="produto" name="produto" placeholder="Produto"
+										class="form-control input-md" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label" for="Estado Civil">Quantidade:</label>
+								<div class="col-md-2">
+									<input id="quantidade" name="c" placeholder="Quantidade"
+										class="form-control input-md" type="number">
+								</div>
+								<label class="col-md-1 control-label" for="Estado Civil">Preço R$:</label>
+								<div class="col-md-2">
+									<input id="preco" name="preco" class="form-control input-md" type="number" step=0.01 >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label" for="Estado Civil">Status:</label>
+								<div class="col-md-2">
+								    <select required id="status" name="status" class="form-control">
+								      <option value=""></option>
+								      <option value="Pago">Pago</option>
+								      <option value="Não Pago">"Não Pago</option>
+								    </select>
+								 </div>
+								<label class="col-md-1 control-label" for="Estado Civil">Preço R$:</label>
+								<div class="col-md-2">
+								    <select required id="status" name="status" class="form-control">
+								      <option value=""></option>
+								      <option value="UN">Unidada</option>
+								      <option value="PC">Peça</option>
+								    </select>
+								 </div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label" for="Estado Civil">Data Vencimento:</label>
+								<div class="col-md-2">
+									<input id="data" name="data" placeholder="Data Vencimento:"
+										class="form-control input-md" type="date">
+								</div>
+							</div>
+							<!-- Button (Double) -->
+							<div class="form-group">
+								<label class="col-md-2 control-label" for="Cadastrar"></label>
+								<div class="col-md-8">
+									<button id="Cadastrar" name="Cadastrar" class="btn btn-success"
+										type="Submit">Cadastrar</button>
+									<button id="Cancelar" name="Cancelar" class="btn btn-danger"
+										type="Reset">Cancelar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+
+
+	<table id="txtTable" width="60%" cellspacing="0" border="2" 	CELLSPACING=2 CELLPADDING=5 RULES=rows>
+		<CAPTION>
+			<h1>Materiais</h1>
+		</CAPTION>
+		<thead>
+			<tr>
+				<th>nome</th>
+				<th>Quandidade:</th>
+				<th>Status</th>
+				<th>Local de estoque</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Tiger Nixon</td>
+				<td>10</td>
+				<td>Pago</td>
+				<td>System Architect</td>
+				<td><button id="editar" name="editar" class="btn btn-success"type="Submit">Editar</button></td>
+			</tr>
+			<tr>
+				<td>Tiger Nixon</td>
+				<td>10</td>
+				<td>Nao Pago</td>
+				<td>System Architect</td>
+				<td><button id="editar" name="editar" class="btn btn-success"type="Submit">Editar</button></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<div class="form-group etyle1">
+		<table>
+			<tr>
+				<td>
+					<div >
+						<h1>Gerar relatorio de materiais não pago</h1>
+					</div>
+				</td>
+				<td>
+					<div class="col-md-8 ">
+						<h1><button id="Cadastrar" name="Cadastrar" class="btn btn-success"
+										type="Submit">Cadastrar</button></h1>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+		<script>
+		  $(document).ready(function(){
+			  $('#txtTable').DataTable({
+				"language": {
+						"lengthMenu": "Mostrando _MENU_ registros por pagina",
+						"zeroRecords": "Nada encontrado",
+						"info": "Mostrando pagina _PAGE_ de _PAGES_",
+						"infoEmpty": "Nenhum registro disponível",
+						"infoFiltered": "(filtrado de _MAX_ registros no total)"
+					}
+				});
+		  });
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+	<title>Unidade</title>
+	<link
+		href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+		rel="stylesheet" id="bootstrap-css">
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
+	<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+
+		<style>
+			.etyle4{
+			 margin: 10px 50px auto 50px;
+		     width: 25%;
+				}
+				th{
+				 color: #ffffff;	
+				 font-family: Verdana, Arial, Helvetica;
+				 font-size: 14px;
+				 background-color: #007cc2;
+				}
+				
+				td {
+				 font-family: Verdana, Arial, Helvetica, sans-serif;
+
+				 table-layout: fixed;
+				 height: 10px;
+				}
+		</style>
+
+		</style>
+
+</head>
+<body>
+
+	<form class="form-horizontal">
+		<fieldset>
+			<div class="panel panel-primary">
+				<div class="panel-heading">Cadastrar Unidade</div>
+				<div class="panel-body">
+					<div class="form-group">
+
+						<div id="newpost">
+							<div class="form-group">
+								<div class="col-md-2 control-label">
+									<h3>Unidade</h3>
+								</div>
+							</div>
+							<!-- Text input-->
+							<div class="form-group">
+								<label class="col-md-2 control-label" for="vinculo">Unidade</label>
+								<div class="col-md-2">
+									<input id="unidade" name="unidade" placeholder="PC"
+										class="form-control input-md" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label" for="Estado Civil">Descrição:</label>
+								<div class="col-md-2">
+									<input id="prateleira" name="prateleira"
+										placeholder="Peça" class="form-control input-md"
+										type="text">
+								</div>
+							</div>
+										
+								
+								
+								<!-- Button (Double) -->
+							<div class="form-group">
+								<label class="col-md-2 control-label" for="Cadastrar"></label>
+								<div class="col-md-8">
+									<button id="Cadastrar" name="Cadastrar" class="btn btn-success"
+										type="Submit">Cadastrar</button>
+									<button id="Cancelar" name="Cancelar" class="btn btn-danger"
+										type="Reset">Cancelar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+
+
+	<table id="txtTable" width="60%" cellspacing="0" border="2" 	CELLSPACING=2 CELLPADDING=5 RULES=rows>
+		<CAPTION>
+			<h1>Unidade</h1>
+		</CAPTION>
+		<thead>
+			<tr>
+				<th>codigo</th>
+				<th>Unidade:</th>
+				<th>Descrição</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Tiger Nixon</td>
+				<td>System Architect</td>
+				<td>10</td>
+				<td><button id="editar" name="editar" class="btn btn-success"type="Submit">Editar</button></td>
+			</tr>
+			<tr>
+				<td>Garrett Winters</td>
+				<td>Accountant</td>
+				<td>10</td>
+				<td><button id="editar" name="editar" class="btn btn-success"type="Submit">Editar</button></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+		<script>
+		  $(document).ready(function(){
+			  $('#txtTable').DataTable({
+				"language": {
+						"lengthMenu": "Mostrando _MENU_ registros por pagina",
+						"zeroRecords": "Nada encontrado",
+						"info": "Mostrando pagina _PAGE_ de _PAGES_",
+						"infoEmpty": "Nenhum registro disponível",
+						"infoFiltered": "(filtrado de _MAX_ registros no total)"
+					}
+				});
+		  });
+		</script>
+
+</body>
+</html>
