@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head>
-	<title>Unidade</title>
+	<title>Fornecedor</title>
+	<meta charset="utf-8"></meta>
+	<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
 	<link
 		href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
 		rel="stylesheet" id="bootstrap-css">
@@ -11,7 +13,10 @@
 	<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
   	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 		<style>
 			.etyle4{
@@ -33,10 +38,32 @@
 				}
 		</style>
 
-		</style>
-
 </head>
 <body>
+
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span> 
+	      </button>
+	      <a class="navbar-brand" href="Home.html">Gestão de Estoque</a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">Home</a></li>
+	        <li><a href="cadastrarFornecedor.html">Casdastar fornecedor</a></li>
+	        <li><a href="cadastrarMaterial.html">Casdastar material</a></li> 
+	        <li><a href="cadastrarProjeto.html">Casdastar projeto</a></li>
+	        <li><a href="cadastroUnidade.html">Casdastar unidade</a></li>
+	        <li><a href="localDeEstocagem.html">Casdastar local de estoque</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	
 
 	<form class="form-horizontal">
 		<fieldset>
@@ -60,7 +87,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-md-2 control-label" for="Estado Civil">Descrição:</label>
+								<label class="col-md-2 control-label" for="Estado Civil">Descricão:</label>
 								<div class="col-md-2">
 									<input id="prateleira" name="prateleira"
 										placeholder="Peça" class="form-control input-md"
@@ -96,7 +123,7 @@
 			<tr>
 				<th>codigo</th>
 				<th>Unidade:</th>
-				<th>Descrição</th>
+				<th>Descricão</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -125,7 +152,7 @@
 						"lengthMenu": "Mostrando _MENU_ registros por pagina",
 						"zeroRecords": "Nada encontrado",
 						"info": "Mostrando pagina _PAGE_ de _PAGES_",
-						"infoEmpty": "Nenhum registro disponível",
+						"infoEmpty": "Nenhum registro disponÃ­vel",
 						"infoFiltered": "(filtrado de _MAX_ registros no total)"
 					}
 				});
