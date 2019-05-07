@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title>Fornecedor</title>
+	<title>Unidade</title>
 	<meta charset="utf-8"></meta>
 	<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
 	<link
@@ -49,22 +49,23 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span> 
 	      </button>
-	      <a class="navbar-brand" href="Home.html">Gestão de Estoque</a>
+	      <a class="navbar-brand" href="">Gestão de Estoque</a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="#">Home</a></li>
-	        <li><a href="cadastrarFornecedor.html">Casdastar fornecedor</a></li>
-	        <li><a href="cadastrarMaterial.html">Casdastar material</a></li> 
-	        <li><a href="cadastrarProjeto.html">Casdastar projeto</a></li>
-	        <li><a href="cadastroUnidade.html">Casdastar unidade</a></li>
-	        <li><a href="localDeEstocagem.html">Casdastar local de estoque</a></li>
+	        <li><a href="Home.html">Home</a></li>
+	        <li><a href="cadastrarFornecedor.html">Fornecedor</a></li>
+	        <li><a href="cadastrarMaterial.html">Material</a></li>
+	        <li class="active"><a href="cadastroUnidade.html">Unidade</a></li>
+	        <li><a href="localDeEstocagem.html">Local de estocagem</a></li>
+	        <li><a href="cadastrarProjeto.html">Projeto</a></li>
+	        <li><a href="AdmistrarProjetos.html">Administrar Projeto</a></li>
 	      </ul>
 	    </div>
 	  </div>
 	</nav>
 	
-
+	
 	<form class="form-horizontal">
 		<fieldset>
 			<div class="panel panel-primary">
@@ -80,7 +81,7 @@
 							</div>
 							<!-- Text input-->
 							<div class="form-group">
-								<label class="col-md-2 control-label" for="vinculo">Unidade</label>
+								<label class="col-md-2 control-label" for="vinculo">Unidade:</label>
 								<div class="col-md-2">
 									<input id="unidade" name="unidade" placeholder="PC"
 										class="form-control input-md" type="text">
@@ -114,7 +115,7 @@
 		</fieldset>
 	</form>
 
-
+	<div class="container">
 	<table id="txtTable" width="60%" cellspacing="0" border="2" 	CELLSPACING=2 CELLPADDING=5 RULES=rows>
 		<CAPTION>
 			<h1>Unidade</h1>
@@ -142,9 +143,10 @@
 			</tr>
 		</tbody>
 	</table>
+	</div>
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 		<script>
 		  $(document).ready(function(){
 			  $('#txtTable').DataTable({
