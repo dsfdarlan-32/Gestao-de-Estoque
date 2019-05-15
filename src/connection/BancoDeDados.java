@@ -1,45 +1,36 @@
 package connection;
 
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
+import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
+import java.sql.SQLException;
 
- 
 public class BancoDeDados {
+	
   
-  protected Connection connection = null;
-  protected Statement statement = null;
-  protected ResultSet resultSet =  null;
-  
-  public void conectar () {
-    String servidor = "jdbc:mysql://127.0.0.1:3306/meubanco";
-    String usuario = "Darlan";
-    String senha = "";
-    String driver = "com.mysql.jdbc.Driver";
-    
-    try {
-      Class.forName(driver);
-      this.connection = (Connection) DriverManager.getConnection(servidor,usuario,senha);
-      this.statement = (Statement) this.connection.createStatement();
-      
-    }catch(Exception e){
-      System.out.println("Erro: " + e.getMessage());        
-    }  
-    
-  }
+  public Connection getConnection() {
+	  Connection cn = null;
+	  
+	  try {
+		  
+		  Class.forName("com.mysql.jdbc.Driver");
 
-  public boolean statusConexao(){
-    
-    if(this.connection != null){
-      return true;
-      
-    }else {
-      
-    return false;
-    }
-    
-  }
+		  String url = "jdbc:mysql://localhost/web2";
+		  String username = "root"; 
+		  String password = "jesus";
+		  
+		  cn = DriverManager.getConnection(url, username,password);
+		
+		} catch (ClassNotFoundException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+			
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
 	 
+	  return cn;
+ }
+	
 
 }
