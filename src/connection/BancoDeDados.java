@@ -14,9 +14,9 @@ public class BancoDeDados {
 		  
 		  Class.forName("com.mysql.jdbc.Driver");
 
-		  String url = "jdbc:mysql://localhost/web2";
-		  String username = "root"; 
-		  String password = "jesus";
+		  String url = "jdbc:mysql://localhost/ESTOQUE";
+		  String username = "darlan"; 
+		  String password = "Dddoline99977244@";
 		  
 		  cn = DriverManager.getConnection(url, username,password);
 	
@@ -31,6 +31,10 @@ public class BancoDeDados {
 	 
 	  return cn;
  }
-	
+  
+  public static void main(String[] args) {
+	  BancoDeDados bancoDeDados = new BancoDeDados();
+	  System.out.println(bancoDeDados.getConnection());
 
+	}
 }
