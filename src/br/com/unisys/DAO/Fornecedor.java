@@ -1,12 +1,22 @@
 package br.com.unisys.DAO;
 
-import connection.BancoDeDados;
-
-public class Fornecedor extends BancoDeDados {
+public class Fornecedor {
+  public String nomeFornecedor;
+  public String codigoFornecedor;
   
-  String query = "SELECT * FROM Fornecedor ";
-
+  public String getNomeFornecedor() {
+    return nomeFornecedor;
+  }
   
+  public void setNomeFornecedor(String nomeFornecedor) {
+    this.nomeFornecedor = nomeFornecedor;
+  }
   
+  public String getCodigoFornecedor() {
+    return codigoFornecedor;
+  }
   
+  public void setCodigoFornecedor(String codigoFornecedor) {
+    this.codigoFornecedor = codigoFornecedor;
+  }
 }

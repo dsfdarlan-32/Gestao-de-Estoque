@@ -19,7 +19,7 @@ public class BancoDeDados {
 		  String password = "jesus";
 		  
 		  cn = DriverManager.getConnection(url, username,password);
-		
+	
 		} catch (ClassNotFoundException e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
