@@ -7,16 +7,18 @@
 		<welcome-file>index.jsp</welcome-file>
 		<welcome-file>default.html</welcome-file>
 		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
-		<welcome-file>cadastrarFornecedor.htm</welcome-file>
-		
+		<welcome-file>default.jsp</welcome-file>		
   </welcome-file-list>
   <servlet>
     <servlet-name>FornecedorAction</servlet-name>
     <servlet-class>br.com.unisys.controller.FornecedorAction</servlet-class>
   </servlet>
+    <servlet>
+    <servlet-name>UnidadeAction</servlet-name>
+    <servlet-class>br.com.unisys.controller.UnidadeAction</servlet-class>
+  </servlet>
   <servlet-mapping>
-    <servlet-name>FornecedorAction</servlet-name>
-    <url-pattern>/FornecedorAction</url-pattern>
+    <servlet-name>UnidadeAction</servlet-name>
+    <url-pattern>/UnidadeActionprojetos</url-pattern>
   </servlet-mapping>
 </web-app>

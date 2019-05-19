@@ -4,28 +4,26 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.unisys.DAO.Fornecedor;
 import br.com.unisys.DAO.FornecedorDAO;
 
-public class FornecedorAction extends HttpServlet{
+public class FornecedorAction {
 	
-	private static final long serialVersionUID = -6359616861621683724L;
 	
   FornecedorDAO fornecedorDAO = new FornecedorDAO();
 	
 	
-	public void adicionaFornecedor(HttpServletRequest request, HttpServletResponse response)   throws ServletException, IOException, SQLException{
+	public String adicionaFornecedor(HttpServletRequest request, HttpServletResponse response)   throws ServletException, IOException, SQLException{
 	  Fornecedor fornecedor = new Fornecedor();
 	  // Captura os dados do formulário.
-    String codigoFornecedor = request.getParameter("nome");
-    String nomeFornecedor = request.getParameter("codigo");
+	    String codigoFornecedor = request.getParameter("nomeFornecedor");
+	    String nomeFornecedor = request.getParameter("codigoFornecedor");
 		fornecedor.setNomeFornecedor(nomeFornecedor);
 		fornecedor.setCodigoFornecedor(codigoFornecedor);
-		fornecedorDAO.adicionar(fornecedor);
-
+		String status =fornecedorDAO.adicionar(fornecedor);
+		return status;
 	}
 }

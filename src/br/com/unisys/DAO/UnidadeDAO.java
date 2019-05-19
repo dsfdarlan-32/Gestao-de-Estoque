@@ -8,23 +8,23 @@ import com.mysql.jdbc.PreparedStatement;
 
 import connection.BancoDeDados;
 
-public class FornecedorDAO {
+public class UnidadeDAO {
 	private Connection cn;
 
-	public FornecedorDAO() {
+	public UnidadeDAO() {
 		cn = (Connection) new BancoDeDados().getConnection();
 	}
 
 	//Metodo para Adicionar objeto na tabela
-	public String adicionar(Fornecedor fornecedor) throws SQLException {
+	public String adicionar(Unidade unidade) throws SQLException {
 
 		try {
 			
-			String sql = "insert into fornecedores (codigoFor,nome) " + "values( ? ,?)";
+			String sql = "insert into unidades (tipoUni,descricao) " + "values( ? ,?)";
 			PreparedStatement stmt = (PreparedStatement) cn.prepareStatement(sql);
 
-			stmt.setString(1, fornecedor.getNomeFornecedor());
-			stmt.setString(2, fornecedor.getCodigoFornecedor());
+			stmt.setString(1, unidade.getUnidade());
+			stmt.setString(2, unidade.getDescricao());
 			stmt.execute();
 			
 			return "OK";
