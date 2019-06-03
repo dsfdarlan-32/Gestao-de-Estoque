@@ -15,8 +15,8 @@ public class BancoDeDados {
 		  Class.forName("com.mysql.jdbc.Driver");
 
 		  String url = "jdbc:mysql://localhost/web2";
-		  String username = "root"; 
-		  String password = "jesus";
+		  String username = "darlan"; 
+		  String password = "92381534";
 		  
 		  cn = DriverManager.getConnection(url, username,password);
 	
