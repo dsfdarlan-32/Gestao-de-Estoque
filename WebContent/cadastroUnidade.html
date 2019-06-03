@@ -66,7 +66,7 @@
 	</nav>
 	
 	
-	<form class="form-horizontal">
+	<form class="form-horizontal" action="unidade.jsp" method="post">
 		<fieldset>
 			<div class="panel panel-primary">
 				<div class="panel-heading">Cadastrar Unidade</div>
@@ -90,7 +90,7 @@
 							<div class="form-group">
 								<label class="col-md-2 control-label" for="Estado Civil">Descricão:</label>
 								<div class="col-md-2">
-									<input id="prateleira" name="prateleira"
+									<input id="descricao" name="descricao"
 										placeholder="Peça" class="form-control input-md"
 										type="text">
 								</div>
@@ -104,6 +104,8 @@
 								<div class="col-md-8">
 									<button id="Cadastrar" name="Cadastrar" class="btn btn-success"
 										type="Submit">Cadastrar</button>
+									<button id="Cancelar" name="Cancelar" class="btn btn-primary"
+										type="Reset">Limpar</button>
 									<button id="Cancelar" name="Cancelar" class="btn btn-danger"
 										type="Reset">Cancelar</button>
 								</div>
