@@ -2,6 +2,8 @@ package br.com.unisys.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -25,4 +27,16 @@ public class ProjetosAction {
 		String status = projetoDAO.adicionar(projeto);
 		return status;
 	}
+	
+	public List<Projeto> buscaProjetos() throws SQLException {
+		List<Projeto> listaProjeto = new ArrayList<Projeto>();
+		listaProjeto = projetoDAO.selectProjeto();
+		return listaProjeto;
+	}
+	
+	public static void main(String[] args) throws SQLException {
+		ProjetosAction projetosAction = new ProjetosAction();
+		projetosAction.buscaProjetos();
+	}
+	
 }

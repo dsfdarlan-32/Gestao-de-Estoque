@@ -2,6 +2,8 @@ package br.com.unisys.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -25,4 +27,16 @@ public class UnidadeAction {
 		String status = unidadeDAO.adicionar(unidade);
 		return status;
 	}
+	
+	public List<Unidade> buscaUnidade() throws SQLException {
+		List<Unidade> listaUnidade = new ArrayList<Unidade>();
+		listaUnidade = unidadeDAO.selectUnidade();
+		return listaUnidade;
+	}
+	
+	public static void main(String[] args) throws SQLException {
+		UnidadeAction unidadeAction = new UnidadeAction();
+		unidadeAction.buscaUnidade();
+	}
+	
 }

@@ -7,6 +7,17 @@ public class LocalEstocagem {
 	private String andar;
 	private String box;
 
+	public LocalEstocagem() {
+	}
+	
+	public LocalEstocagem(String codLocal, String corredor, String prateleira, String andar, String box) {
+		this.codLocal = codLocal;
+		this.corredor = corredor;
+		this.prateleira = prateleira;
+		this.andar = andar;
+		this.box = box;
+	}
+
 	public String getCodLocal() {
 		return codLocal;
 	}

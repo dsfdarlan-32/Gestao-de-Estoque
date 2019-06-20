@@ -1,16 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <head>
-<title>Fornecedor</title>
+<title>Local de Estocagem</title>
 <meta charset="utf-8"></meta>
-<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+<meta http-equiv=âContent-Typeâ content=âtext/html;
+	charset=utf-8â³>
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script
 	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 <script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
 <link rel="stylesheet" type="text/css"
 	href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
@@ -19,6 +21,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
@@ -52,15 +56,16 @@ td {
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="">Gestão de Estoque</a>
+				<a class="navbar-brand" href="">GestÃ£o de Estoque</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<li><a href="Home.html">Home</a></li>
-					<li class="active"><a href="cadastrarFornecedor.html">Fornecedor</a></li>
+					<li><a href="cadastrarFornecedor.html">Fornecedor</a></li>
 					<li><a href="cadastrarMaterial.html">Material</a></li>
 					<li><a href="cadastroUnidade.html">Unidade</a></li>
-					<li><a href="localDeEstocagem.html">Local de estocagem</a></li>
+					<li class="active"><a href="localDeEstocagem.html">Local
+							de estocagem</a></li>
 					<li><a href="cadastrarProjeto.html">Projeto</a></li>
 					<li><a href="AdmistrarProjetos.html">Administrar Projeto</a></li>
 				</ul>
@@ -68,36 +73,53 @@ td {
 		</div>
 	</nav>
 
-	<form class="form-horizontal" action="fornecedor.jsp" method="post">
+
+	<form class="form-horizontal" action="localEstocagem.jsp" method="post">
 		<fieldset>
 			<div class="panel panel-primary">
-				<div class="panel-heading">Cadastrar Fornecedor</div>
+				<div class="panel-heading">Local de estocagem</div>
 				<div class="panel-body">
 					<div class="form-group">
 
 						<div id="newpost">
 							<div class="form-group">
 								<div class="col-md-2 control-label">
-									<h3>Fornecedor</h3>
+									<h3>Local de estocagem</h3>
 								</div>
 							</div>
 							<!-- Text input-->
 							<div class="form-group">
-								<label class="col-md-2 control-label" for="vinculo">
-									Nome fornecedor:</label>
+								<label class="col-md-2 control-label" for="vinculo">Codigo
+									local:</label>
 								<div class="col-md-2">
-									<input id="nomeFornecedor" name="nomeFornecedor"
-										placeholder="Nome fornecedor" class="form-control input-md"
+									<input id="codLocal" name="codLocal" placeholder="Codigo"
+										class="form-control input-md" type="text">
+								</div>
+								<label class="col-md-1 control-label" for="Nome">Corredor:</label>
+								<div class="col-md-2">
+									<input id="corredor" name="corredor" placeholder="corredor"
+										class="form-control input-md" type="text">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-2 control-label" for="Estado Civil">Prateleira:</label>
+								<div class="col-md-2">
+									<input id="prateleira" name="prateleira"
+										placeholder="prateleira" class="form-control input-md"
 										type="text">
+								</div>
+								<label class="col-md-1 control-label" for="Estado Civil">Andar:</label>
+								<div class="col-md-2">
+									<input id="andar" name="andar" placeholder="Andar"
+										class="form-control input-md" type="text">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-md-2 control-label" for="Estado Civil">Codigo
-									Fornecedor: </label>
+								<label class="col-md-2 control-label" for="Estado Civil">Box:</label>
 								<div class="col-md-2">
-									<input id="codigoFornecedor" name="codigoFornecedor"
-										placeholder="Codigo Fornecedor" class="form-control input-md"
-										type="text">
+									<input id="box" name="box" placeholder="Box"
+										class="form-control input-md" type="text">
 								</div>
 							</div>
 							<!-- Button (Double) -->
@@ -123,30 +145,38 @@ td {
 		<table id="txtTable" width="60%" cellspacing="0" border="2"
 			CELLSPACING=2 CELLPADDING=5 RULES=rows>
 			<CAPTION>
-				<h1>Fornecedor</h1>
+				<h1>Local de estocagem</h1>
 			</CAPTION>
 			<thead>
 				<tr>
-					<th>Codigo Fornecedor</th>
-					<th>Nome fornecedor</th>
-					<th></th>
+					<th>Codigo local</th>
+					<th>Prateleira</th>
+					<th>Box</th>
+					<th>Corredor</th>
+					<th>Andar</th>
 				</tr>
 			</thead>
 			<tbody>
-<!-- 				<tr> -->
-<!-- 					<td>Tiger Nixon</td> -->
-<!-- 					<td>System Architect</td> -->
-<!-- 					<td>10</td> -->
-<!-- 					<td><button id="editar" name="editar" class="btn btn-success" -->
-<!-- 							type="Submit">Editar</button></td> -->
-<!-- 				</tr> -->
-<!-- 				<tr> -->
-<!-- 					<td>Garrett Winters</td> -->
-<!-- 					<td>Accountant</td> -->
-<!-- 					<td>10</td> -->
-<!-- 					<td><button id="editar" name="editar" class="btn btn-success" -->
-<!-- 							type="Submit">Editar</button></td> -->
-<!-- 				</tr> -->
+				<%@ page language="java" import="br.com.unisys.controller.LocalEstocagemAction"%>
+				<%@ page language="java" import="br.com.unisys.DAO.LocalEstocagem"%>
+				<%@ page language="java" import="java.util.ArrayList"%>
+				<%@ page language="java" import="java.util.List"%>
+				<%
+					List<LocalEstocagem> listaLocalEstocagem = new ArrayList<LocalEstocagem>();
+					LocalEstocagemAction localEstocagemAction = new LocalEstocagemAction();
+					listaLocalEstocagem = localEstocagemAction.buscaLocalEstocagem();
+					for (LocalEstocagem forn : listaLocalEstocagem) {
+				%>
+				<tr>
+					<td><%=forn.getCodLocal()%></td>
+					<td><%=forn.getPrateleira()%></td>
+					<td><%=forn.getBox()%></td>
+					<td><%=forn.getCorredor()%></td>
+					<td><%=forn.getAndar()%></td>
+				</tr>
+				<%
+					}
+				%>
 			</tbody>
 		</table>
 	</div>
@@ -161,17 +191,11 @@ td {
 					"lengthMenu" : "Mostrando _MENU_ registros por pagina",
 					"zeroRecords" : "Nada encontrado",
 					"info" : "Mostrando pagina _PAGE_ de _PAGES_",
-					"infoEmpty" : "Nenhum registro disponÃ­vel",
+					"infoEmpty" : "Nenhum registro disponÃÂ­vel",
 					"infoFiltered" : "(filtrado de _MAX_ registros no total)"
-				},
-				"columns" : [
-					{ "data" : "codigoFornecedor" },
-					{ "data" : "nomeFornecedor" }
-				]
+				}
 			});
-			
 		});
 	</script>
-
 </body>
 </html>

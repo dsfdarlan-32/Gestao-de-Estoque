@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <head>
 <title>Fornecedor</title>
@@ -129,24 +131,27 @@ td {
 				<tr>
 					<th>Codigo Fornecedor</th>
 					<th>Nome fornecedor</th>
-					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-<!-- 				<tr> -->
-<!-- 					<td>Tiger Nixon</td> -->
-<!-- 					<td>System Architect</td> -->
-<!-- 					<td>10</td> -->
-<!-- 					<td><button id="editar" name="editar" class="btn btn-success" -->
-<!-- 							type="Submit">Editar</button></td> -->
-<!-- 				</tr> -->
-<!-- 				<tr> -->
-<!-- 					<td>Garrett Winters</td> -->
-<!-- 					<td>Accountant</td> -->
-<!-- 					<td>10</td> -->
-<!-- 					<td><button id="editar" name="editar" class="btn btn-success" -->
-<!-- 							type="Submit">Editar</button></td> -->
-<!-- 				</tr> -->
+				<%@ page language="java" import = "br.com.unisys.controller.FornecedorAction" %>
+				<%@ page language="java" import = "br.com.unisys.DAO.FornecedorDAO" %>
+				<%@ page language="java" import = "br.com.unisys.DAO.Fornecedor" %>
+				<%@ page language="java" import = "java.util.ArrayList" %>
+				<%@ page language="java" import = "java.util.List" %>
+				
+				<%
+				List<Fornecedor> listaFornecedores = new ArrayList<Fornecedor>();
+				FornecedorDAO fornecedorDAO = new FornecedorDAO();
+				listaFornecedores = fornecedorDAO.selectFornecedor();
+				for (Fornecedor forn : listaFornecedores) {
+					
+				%>
+				<tr>
+					<td><%= forn.getCodigoFornecedor() %></td>
+					<td><%= forn.getNomeFornecedor() %></td>
+				</tr>
+				<% }%>
 			</tbody>
 		</table>
 	</div>
@@ -155,23 +160,18 @@ td {
 	<script type="text/javascript" charset="utf8"
 		src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 	<script>
-		$(document).ready(function() {
-			$('#txtTable').DataTable({
-				"language" : {
-					"lengthMenu" : "Mostrando _MENU_ registros por pagina",
-					"zeroRecords" : "Nada encontrado",
-					"info" : "Mostrando pagina _PAGE_ de _PAGES_",
-					"infoEmpty" : "Nenhum registro disponÃ­vel",
-					"infoFiltered" : "(filtrado de _MAX_ registros no total)"
-				},
-				"columns" : [
-					{ "data" : "codigoFornecedor" },
-					{ "data" : "nomeFornecedor" }
-				]
-			});
-			
-		});
-	</script>
+		  $(document).ready(function(){
+			  $('#txtTable').DataTable({
+				"language": {
+						"lengthMenu": "Mostrando _MENU_ registros por pagina",
+						"zeroRecords": "Nada encontrado",
+						"info": "Mostrando pagina _PAGE_ de _PAGES_",
+						"infoEmpty": "Nenhum registro disponÃ­vel",
+						"infoFiltered": "(filtrado de _MAX_ registros no total)"
+					}
+				});
+		  });
+		</script>
 
 </body>
 </html>

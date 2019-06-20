@@ -2,6 +2,8 @@ package br.com.unisys.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -30,6 +32,17 @@ public class LocalEstocagemAction {
 	    localEstocagem.setBox(box);
 		String status =localEstocagemDAO.adicionar(localEstocagem);
 		return status;
-		
 	}
+	
+	public List<LocalEstocagem> buscaLocalEstocagem() throws SQLException {
+		List<LocalEstocagem> listaLocalEstocagem = new ArrayList<LocalEstocagem>();
+		listaLocalEstocagem = localEstocagemDAO.selectLocalEstocagem();
+		return listaLocalEstocagem;
+	}
+	
+	public static void main(String[] args) throws SQLException {
+		LocalEstocagemAction localEstocagemAction = new LocalEstocagemAction();
+		localEstocagemAction.buscaLocalEstocagem();
+	}
+	
 }
