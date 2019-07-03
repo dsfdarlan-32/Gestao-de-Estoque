@@ -13,7 +13,7 @@
 	LocalEstocagemAction localEstocagemAction = new LocalEstocagemAction();
 	String status = localEstocagemAction.adicionalocalEstocagem(request, response);
 	if(status.equals("OK")){  
-	response.sendRedirect("localDeEstocagem.html");
+	response.sendRedirect("localDeEstocagem2.jsp");
 	}else{
 		
 	}

@@ -1,8 +1,8 @@
 package br.com.unisys.DAO;
 
 public class Fornecedor {
-	public String nomeFornecedor;
-	public String codigoFornecedor;
+	private String nomeFornecedor;
+	private String codigoFornecedor;
 
 	public Fornecedor() {
 	}

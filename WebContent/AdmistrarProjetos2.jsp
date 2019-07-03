@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title>Material</title>
+	<title>Adm Projeto</title>
 	<meta charset="utf-8"></meta>
 	<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
 	<link
@@ -39,7 +39,6 @@
 		</style>
 </head>
 <body>
-
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
@@ -52,86 +51,57 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav">
-	        <li><a href="Home.html">Home</a></li>
-	        <li><a href="cadastrarFornecedor.html">Fornecedor</a></li>
-	        <li class="active"><a href="cadastrarMaterial.html">Material</a></li>
-	        <li><a href="cadastroUnidade.html">Unidade</a></li>
-	        <li><a href="localDeEstocagem.html">Local de estocagem</a></li>
-	        <li><a href="cadastrarProjeto.html">Projeto</a></li>
-	        <li><a href="AdmistrarProjetos.html">Administrar Projeto</a></li>
+	        <li><a href="Home.html">Home</a></li>		
+	        <li><a href="cadastrarFornecedor2.jsp">Fornecedor</a></li>
+	        <li><a href="cadastrarMaterial.jsp">Material</a></li>
+	        <li><a href="cadastroUnidade2.jsp">Unidade</a></li>
+	        <li><a href="localDeEstocagem2.jsp">Local de estocagem</a></li>
+	        <li><a href="cadastrarProjeto2.jsp">Projeto</a></li>
+	        <li class="active"><a href="AdmistrarProjetos2.jsp">Administrar Projeto</a></li>
 	      </ul>
 	    </div>
 	  </div>
 	</nav>
-	
-	
-	<form class="form-horizontal">
+
+		<form class="form-horizontal" action="ADMprojeto.jsp" method="post">
 		<fieldset>
 			<div class="panel panel-primary">
-				<div class="panel-heading">Cadastrar Material</div>
+				<div class="panel-heading">Cadastrar Materiais Utilizados</div>
 				<div class="panel-body">
 					<div class="form-group">
 
 						<div id="newpost">
 							<div class="form-group">
 								<div class="col-md-2 control-label">
-									<h3>Material</h3>
+									<h3>Materiais Utilizados</h3>
 								</div>
 							</div>
+							<!-- Text input-->
 							<div class="form-group">
-								<label class="col-md-2 control-label" for="vinculo">Fornecedor:</label>
+								<label class="col-md-2 control-label" for="vinculo">Projeto:</label>
 								<div class="col-md-2">
-									<input id="fornecedor" name="fornecedor" placeholder="Fornecedor"
+									<input id="projeto" name="projeto" placeholder="Projeto"
 										class="form-control input-md" type="text">
 								</div>
-								<label class="col-md-1 control-label" for="Estado Civil">Estoque:</label>
+								<label class="col-md-1 control-label" for="Estado Civil">Material:</label>
 								<div class="col-md-2">
-									<input id="estoque" name="estoque"
-										placeholder="Estoque" class="form-control input-md"
-										type="text">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-md-2 control-label" for="Estado Civil">Produto:</label>
-								<div class="col-md-2">
-									<input id="produto" name="produto" placeholder="Produto"
+									<input id="material" name="material" placeholder="Material"
 										class="form-control input-md" type="text">
 								</div>
-								<label class="col-md-1 control-label" for="Estado Civil">Quantidade:</label>
+							</div>							
+							<div class="form-group">
+								<label class="col-md-2 control-label" for="Estado Civil">Quantidade:</label>
 								<div class="col-md-2">
-									<input id="quantidade" name="c" placeholder="Quantidade"
+									<input id="quantidade" name="quantidade" placeholder="Quantidade"
 										class="form-control input-md" type="number">
 								</div>
-							</div>
-							<div class="form-group">
-							<label class="col-md-2 control-label" for="Estado Civil">Preço R$:</label>
+								<label class="col-md-1 control-label" for="Estado Civil">Etapa da obra:</label>
 								<div class="col-md-2">
-									<input id="preco" name="preco" class="form-control input-md" placeholder="Valor R$" type="number" step=0.01 >
-								</div>
-								<label class="col-md-1 control-label" for="Estado Civil">Status:</label>
-								<div class="col-md-2">
-								    <select required id="status" name="status" class="form-control">
-								      <option value="">Selecione</option>
-								      <option value="Pago">Pago</option>
-								      <option value="NÃ£o Pago">Não Pago</option>
-								    </select>
+									<input id="etapaObra" name="etapaObra" placeholder="Status"
+										class="form-control input-md" type="text">
 								</div>
 							</div>
-							<div class="form-group">
-								<label class="col-md-2 control-label" for="Estado Civil">Unidade:</label>
-								<div class="col-md-2">
-								    <select required id="status" name="status" class="form-control">
-								      <option value="">Selecione</option>
-								      <option value="Unidade">UN</option>
-								      <option value="Peca">PC</option>
-								    </select>
-								 </div>
-								 <label class="col-md-1 control-label" for="Estado Civil">Data Vencimento:</label>
-								<div class="col-md-2">
-									<input id="data" name="data" placeholder="Data Vencimento:"
-										class="form-control input-md" type="date">
-								 </div>
-							</div>
+								<!-- Button (Double) -->
 							<div class="form-group">
 								<label class="col-md-2 control-label" for="Cadastrar"></label>
 								<div class="col-md-8">
@@ -150,36 +120,39 @@
 		</fieldset>
 	</form>
 
-	
-	 <div class="container">
-		<table id="txtTable" cellspacing="0" border="2" 	CELLSPACING=2 CELLPADDING=5 RULES=rows>
+	<div class="container">
+	<table id="txtTable1" width="60%" cellspacing="0" border="2" 	CELLSPACING=2 CELLPADDING=5 RULES=rows>
 		<CAPTION>
-			<h1>Materiais</h1>
+			<h1>Materiais Utilizados</h1>
 		</CAPTION>
 		<thead>
 			<tr>
-				<th>nome</th>
-				<th>Quandidade:</th>
-				<th>Status</th>
-				<th>Local de estoque</th>
-				<th></th>
+				<th>Projeto</th>
+				<th>Material:</th>
+				<th>Etapa da Obra</th>
+				<th>Quantidade</th>
 			</tr>
 		</thead>
 		<tbody>
+			<%@ page language="java" import="br.com.unisys.controller.ADMProjetosAction"%>
+			<%@ page language="java" import="br.com.unisys.DAO.ADMProjetos"%>
+			<%@ page language="java" import="java.util.ArrayList"%>
+			<%@ page language="java" import="java.util.List"%>
+			<%
+				List<ADMProjetos> listaADMProjetos = new ArrayList<ADMProjetos>();
+				ADMProjetosAction projetosAction = new ADMProjetosAction();
+				listaADMProjetos = projetosAction.buscaADMProjetos();
+				for (ADMProjetos forn : listaADMProjetos) {
+			%>
 			<tr>
-				<td>Tiger Nixon</td>
-				<td>10</td>
-				<td>Pago</td>
-				<td>System Architect</td>
-				<td><button id="editar" name="editar" class="btn btn-success"type="Submit">Editar</button></td>
+				<td><%= projetosAction.SelectNome(Integer.parseInt(forn.getProjeto()))%></td>
+				<td><%= forn.getMaterial()%></td>
+				<td><%= forn.getEtapaObra()%></td>
+				<td><%= forn.getQuantidade()%></td>
 			</tr>
-			<tr>
-				<td>Tiger Nixon</td>
-				<td>10</td>
-				<td>Nao Pago</td>
-				<td>System Architect</td>
-				<td><button id="editar" name="editar" class="btn btn-success"type="Submit">Editar</button></td>
-			</tr>
+			<%
+				}
+			%>
 		</tbody>
 	</table>
 	</div>
@@ -189,24 +162,24 @@
 			<tr>
 				<td>
 					<div class="form-group">
-						<h3>Gerar relatorio de materiais não pago
+						<h3>Gerar relatorio status da obra
 						<button id="Gerar" name="Gerar" class="btn btn-success" type="Submit">Gerar</button></h3>
 					</div>
 				</td>
 			</tr>
 		</table>
 	</div>
-
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 		<script>
 		  $(document).ready(function(){
-			  $('#txtTable').DataTable({
+			  $('#txtTable1').DataTable({
 				"language": {
 						"lengthMenu": "Mostrando _MENU_ registros por pagina",
 						"zeroRecords": "Nada encontrado",
 						"info": "Mostrando pagina _PAGE_ de _PAGES_",
-						"infoEmpty": "Nenhum registro disponível",
+						"infoEmpty": "Nenhum registro disponÃ­vel",
 						"infoFiltered": "(filtrado de _MAX_ registros no total)"
 					}
 				});

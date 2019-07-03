@@ -13,7 +13,7 @@
 	UnidadeAction unidadeAction = new UnidadeAction();
 	String status = unidadeAction.adicionaUnidade(request, response);
 	if(status.equals("OK")){  
-	response.sendRedirect("cadastroUnidade.html");
+	response.sendRedirect("cadastroUnidade2.jsp");
 	}else{
 		
 	}

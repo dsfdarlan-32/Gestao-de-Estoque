@@ -47,10 +47,47 @@ public class ProjetoDAO {
 		}
 		return listaProjeto;
 	}
+	
+	// Metodo para Pegar cod Projeto Passado
+	public String selectCodPro(String projeto )  throws SQLException {
+		String codPro="";
+		try {
+			
+			String sql = "Select idProjeto From projetos where nome = '"+ projeto +"' or idProjeto = '"+ projeto + "'";
+			PreparedStatement stmt = (PreparedStatement) cn.prepareStatement(sql);
+			ResultSet cod = stmt.executeQuery(sql);
+			cod.next();
+			codPro = cod.getString("idProjeto");
+			return codPro;
+
+		} catch (Exception e) {
+			System.out.println("Causa do erro:" + e.getMessage());
+		}
+		return codPro;
+	}
+	
+	// Metodo para Pegar nome Projeto
+		public String selectNomePro(int codProd )  throws SQLException {
+			String nome="";
+			try {
+				
+				String sql = "Select nome From projetos where idProjeto = '"+ codProd +"'";
+				PreparedStatement stmt = (PreparedStatement) cn.prepareStatement(sql);
+				ResultSet nomePro = stmt.executeQuery(sql);
+				nomePro.next();
+				nome = nomePro.getString("nome");
+				return nome;
+
+			} catch (Exception e) {
+				System.out.println("Causa do erro:" + e.getMessage());
+			}
+			return nome;
+		}
 
 	public static void main(String[] args) throws SQLException {
 		ProjetoDAO projetoDAO = new ProjetoDAO();
-		projetoDAO.selectProjeto();
+		String teste = projetoDAO.selectNomePro(3);
+		System.out.println(teste);
 	}
 
 }

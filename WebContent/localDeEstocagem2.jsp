@@ -61,18 +61,16 @@ td {
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<li><a href="Home.html">Home</a></li>
-					<li><a href="cadastrarFornecedor.html">Fornecedor</a></li>
-					<li><a href="cadastrarMaterial.html">Material</a></li>
-					<li><a href="cadastroUnidade.html">Unidade</a></li>
-					<li class="active"><a href="localDeEstocagem.html">Local
-							de estocagem</a></li>
-					<li><a href="cadastrarProjeto.html">Projeto</a></li>
-					<li><a href="AdmistrarProjetos.html">Administrar Projeto</a></li>
+					<li><a href="cadastrarFornecedor2.jsp">Fornecedor</a></li>
+			        <li><a href="cadastrarMaterial.jsp">Material</a></li>
+			        <li><a href="cadastroUnidade2.jsp">Unidade</a></li>
+			        <li class="active"><a href="localDeEstocagem2.jsp">Local de estocagem</a></li>
+			       	<li><a href="cadastrarProjeto2.jsp">Projeto</a></li>
+			        <li><a href="AdmistrarProjetos2.jsp">Administrar Projeto</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-
 
 	<form class="form-horizontal" action="localEstocagem.jsp" method="post">
 		<fieldset>

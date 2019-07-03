@@ -13,7 +13,7 @@
 	FornecedorAction fornecedorAction = new FornecedorAction();
 	String status = fornecedorAction.adicionaFornecedor(request, response);
 	if(status.equals("OK")){  
-	response.sendRedirect("cadastrarFornecedor.html");
+	response.sendRedirect("cadastrarFornecedor2.jsp");
 	}else{
 		
 	}

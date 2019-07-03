@@ -30,7 +30,7 @@ public class FornecedorDAO {
 			return e.toString();
 		}
 	}
-
+	
 	// Metodo para Pegar objeto da tabela
 	public List<Fornecedor> selectFornecedor() throws SQLException {
 
@@ -50,10 +50,44 @@ public class FornecedorDAO {
 		}
 		return listaFornecedores;
 	}
+	
+	// Metodo para Pegar cod Fornecedor Passado
+	public String selectCodFor(String fonecedor )  throws SQLException {
+		String codFor="";
+		try {
+			String sql = "Select codigoFor From fornecedores where nome = '" + fonecedor + "' or codigoFor = '" + fonecedor +"'";
+			PreparedStatement stmt = (PreparedStatement) cn.prepareStatement(sql);
+			ResultSet cod = stmt.executeQuery(sql);
+			cod.next();
+			codFor = cod.getString("codigoFor");
+			return codFor;
+
+		} catch (Exception e) {
+			System.out.println("Causa do erro:" + e.getMessage());
+		}
+		return codFor;
+	}
+
 
 	public static void main(String[] args) throws SQLException {
-		FornecedorDAO fornecedorDAO = new FornecedorDAO();
-		fornecedorDAO.selectFornecedor();
+		//FornecedorDAO fornecedorDAO = new FornecedorDAO();
+		//String teste = fornecedorDAO.selectCodFor("teste");
+		System.out.println(11458);
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
