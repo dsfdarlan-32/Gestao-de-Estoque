@@ -13,6 +13,13 @@ public class Material {
 
 	public Material() {
 	}
+	
+	public Material(String produto, Float preco, String dataVecimento) {
+		super();
+		this.Produto = produto;
+		this.preco = preco;
+		this.DataVecimento = dataVecimento;
+	}
 
 	public Material(String fonecedor, String Produto, Float preco, String unidade, String estoque, Integer quantidade,
 			String statusM, String DataVecimento) {

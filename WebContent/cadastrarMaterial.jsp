@@ -22,25 +22,25 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<style>
-.etyle4 {
-	margin: 10px 50px auto 50px;
-	width: 25%;
-}
+		<style>
+			.style1{
+			 margin: 10px 50px auto 50px;
+		     width: 25%;
+				}
+				th{
+				 color: #ffffff;	
+				 font-family: Verdana, Arial, Helvetica;
+				 font-size: 14px;
+				 background-color: #007cc2;
+				}
+				
+				td {
+				 font-family: Verdana, Arial, Helvetica, sans-serif;
 
-th {
-	color: #ffffff;
-	font-family: Verdana, Arial, Helvetica;
-	font-size: 14px;
-	background-color: #007cc2;
-}
-
-td {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	table-layout: fixed;
-	height: 10px;
-}
-</style>
+				 table-layout: fixed;
+				 height: 10px;
+				}
+		</style>
 </head>
 <body>
 
@@ -157,6 +157,21 @@ td {
 			</div>
 		</fieldset>
 	</form>
+
+	<div class="style1">
+		<form class="form-horizontal" action="Material2.jsp" method="post">	
+			<table>
+				<tr>
+					<td>
+						<div class="form-group">
+							<h3>Gerar relatorio de materiais não pago
+							<button id="Gerar" name="Gerar" class="btn btn-success" type="Submit">Gerar</button></h3>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
 
 	<div class="container">
 		<table id="txtTable" width="60%" cellspacing="0" border="2"

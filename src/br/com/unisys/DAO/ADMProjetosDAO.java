@@ -47,7 +47,7 @@ public class ADMProjetosDAO {
 				listaADMProjetos.add(new ADMProjetos(rs.getInt("id_ADMProjetos"), rs.getString("projeto"), rs.getString("material"),rs.getInt("quantidade"), rs.getString("etapaObra")));
 			}
 		} catch (Exception e) {
-			System.out.println("Causa do erro:" + e.getMessage());
+			System.out.println("Causa do erro 1 :" + e.getMessage());
 		}
 		return listaADMProjetos;
 	}

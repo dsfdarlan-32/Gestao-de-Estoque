@@ -71,7 +71,7 @@ public class MaterialDAO {
 			return quant;
 
 		} catch (Exception e) {
-			System.out.println("Causa do erro:" + e.getMessage());
+			System.out.println("Causa do erro: 2 " + e.getMessage());
 		}
 		return quant;
 	}
@@ -85,16 +85,33 @@ public class MaterialDAO {
 			
 
 		} catch (Exception e) {
-			System.out.println("Causa do erro:" + e.getMessage());
+			System.out.println("Causa do erro: 3 " + e.getMessage());
 		}
 	}
 	
+	// Metodo selenciona material nẽo pagos
+	public List<Material> selectMatNaoPago() throws SQLException {
+		List<Material> listaMaterial = new ArrayList<Material>();
+		try {
+			String sql = "Select Produto, DataVecimento,preco From Material Where statusM = 'Não Pago'";
+			PreparedStatement stmt = (PreparedStatement) cn.prepareStatement(sql);
+			ResultSet rs = stmt.executeQuery(sql);
+			while (rs.next()) {
+				listaMaterial.add(
+						new Material(rs.getString("Produto"), rs.getFloat("preco"), rs.getString("DataVecimento")));
+				System.out.println(rs.getString("Produto")+ " - "+ rs.getFloat("preco")+ " - "+ rs.getString("DataVecimento"));
+			}
+		} catch (Exception e) {
+			System.out.println("Causa do erro: 4 " + e.getMessage());
+		}
+		return listaMaterial;
+	}
 	
-	
-
 	public static void main(String[] args) throws SQLException {
-		MaterialDAO MaterialDAO = new MaterialDAO();
-		MaterialDAO.upadateMaterial(58 ,"cimento");
-		//System.out.println(test);
+		MaterialDAO materialDAO = new MaterialDAO();
+		int test = materialDAO.selectQuantidadeMat("cal");
+		System.out.println(test);
+		materialDAO.upadateMaterial(500, "cal");
+		System.out.println(test);
 	}
 }
