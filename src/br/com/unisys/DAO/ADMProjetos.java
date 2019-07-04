@@ -6,18 +6,32 @@ public class ADMProjetos {
 	private String material;
 	private Integer quantidade;
 	private String etapaObra;
+	private float preco;
 
 	public ADMProjetos() {
 	}
+	
+	public ADMProjetos(String etapaObra) {
+		this.etapaObra = etapaObra;
+	}
 
-	public ADMProjetos(Integer id_ADMProjetos,String projeto, String material, Integer quantidade, String etapaObra) {
+	public ADMProjetos(Integer id_ADMProjetos,String projeto, String material, Integer quantidade, String etapaObra, float preco) {
 		this.id_ADMProjetos = id_ADMProjetos;
 		this.projeto = projeto;
 		this.material = material;
 		this.quantidade = quantidade;
 		this.etapaObra = etapaObra;
+		this.preco = preco;
 	}
 	
+	public float getPreco() {
+		return preco;
+	}
+
+	public void setPreco(float preco) {
+		this.preco = preco;
+	}
+
 	public Integer getId_ADMProjetos() {
 		return id_ADMProjetos;
 	}

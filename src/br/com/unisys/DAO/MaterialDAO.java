@@ -76,6 +76,24 @@ public class MaterialDAO {
 		return quant;
 	}
 	
+	// Metodo para Pegar preco material passado
+	public float selectPrecoMat(String Prod) throws SQLException {
+		float preco = 0;
+		try {
+
+			String sql = "Select preco From Material where Produto = '" + Prod + "'";
+			PreparedStatement stmt = (PreparedStatement) cn.prepareStatement(sql);
+			ResultSet quantMat = stmt.executeQuery(sql);
+			quantMat.next();
+			preco = quantMat.getInt("preco");
+			return preco;
+
+		} catch (Exception e) {
+			System.out.println("Causa do erro: 2 " + e.getMessage());
+		}
+		return preco;
+	}
+	
 	// Metodo para atulizar quantidade material 
 	public void upadateMaterial(int quant, String nome) throws SQLException {
 		try {
@@ -109,9 +127,8 @@ public class MaterialDAO {
 	
 	public static void main(String[] args) throws SQLException {
 		MaterialDAO materialDAO = new MaterialDAO();
-		int test = materialDAO.selectQuantidadeMat("cal");
+		float test = materialDAO.selectPrecoMat("cal");
 		System.out.println(test);
-		materialDAO.upadateMaterial(500, "cal");
-		System.out.println(test);
+		//materialDAO.upadateMaterial(500, "cal");
 	}
 }

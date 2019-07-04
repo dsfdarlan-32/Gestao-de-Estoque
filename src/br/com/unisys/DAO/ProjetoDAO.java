@@ -83,10 +83,31 @@ public class ProjetoDAO {
 			}
 			return nome;
 		}
+		
+		// Metodo para Pegar nome Projeto
+		public float selectValorPro(String nome )  throws SQLException {
+			
+			Float valor = (float) 0.0 ;
+			try {
+				
+				String sql = "select valor from projetos Where nome='"+ nome +"'";
+				PreparedStatement stmt = (PreparedStatement) cn.prepareStatement(sql);
+				ResultSet nomePro = stmt.executeQuery(sql);
+				nomePro.next();
+				valor = nomePro.getFloat("valor");
+				return valor;
+
+			} catch (Exception e) {
+				System.out.println("Causa do erro:" + e.getMessage());
+			}
+			return valor;
+		}
+		
+		
 
 	public static void main(String[] args) throws SQLException {
 		ProjetoDAO projetoDAO = new ProjetoDAO();
-		String teste = projetoDAO.selectNomePro(3);
+		float teste = projetoDAO.selectValorPro("casa 2");
 		System.out.println(teste);
 	}
 
